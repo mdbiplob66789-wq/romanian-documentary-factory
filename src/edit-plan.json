@@ -1,0 +1,17 @@
+{
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "voiceover": "assets/audio/voiceover.mp3",
+  "shots": [
+    {
+      "id": 1,
+      "image": "assets/images/shot_001.jpg",
+      "start": 0,
+      "end": 5,
+      "motion": "slow_zoom_in",
+      "transition": "cut"
+    }
+  ],
+  "music": []
+}
