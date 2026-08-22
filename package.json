@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "studio": "remotion studio src/index.ts",
-    "render": "remotion render src/index.ts RomanianDocumentary out/final_video.mp4 --codec=h264 --crf=18"
+    "studio": "remotion studio src/index.jsx",
+    "render": "remotion render src/index.jsx DocumentaryTest out/final_video.mp4 --codec=h264 --crf=18"
   },
   "dependencies": {
     "@remotion/cli": "4.0.506",
