@@ -47,14 +47,13 @@ const DocumentaryTest = () => {
   const duration = framesPerShot[shotIndex];
   const progress = duration <= 1 ? 1 : local / (duration - 1);
 
-  // Slightly stronger than the first test, but still restrained.
+  // Restrained Ken Burns movement, slightly stronger than the first test.
   const zoomAmount = mood === 'heavy' ? 0.060 : mood === 'medium' ? 0.052 : 0.045;
   const reverse = shotIndex % 4 === 1 || shotIndex % 4 === 2;
   const zoom = reverse
     ? interpolate(progress, [0, 1], [1 + zoomAmount, 1.0])
     : interpolate(progress, [0, 1], [1.0, 1 + zoomAmount]);
 
-  // Tiny alternating drift prevents the slideshow from feeling mechanically identical.
   const panX = interpolate(progress, [0,1], shotIndex % 2 === 0 ? [-0.45,0.45] : [0.45,-0.45]);
   const panY = interpolate(progress, [0,1], shotIndex % 3 === 0 ? [0.25,-0.25] : [-0.15,0.15]);
 
