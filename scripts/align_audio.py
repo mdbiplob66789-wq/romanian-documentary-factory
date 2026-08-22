@@ -52,23 +52,17 @@ ANCHORS = [
 'Au trecut zilele în care ar fi trebuit să apară.'
 ]
 
-
 def norm(s):
     s = ''.join(c for c in unicodedata.normalize('NFKD', s.lower()) if not unicodedata.combining(c))
     s = s.replace('ş','s').replace('ș','s').replace('ţ','t').replace('ț','t')
     return re.findall(r"[a-z0-9]+", s)
 
-
 def score(anchor_tokens, words, pos, length):
     cand = [w['norm'] for w in words[pos:pos+length] if w['norm']]
-    a = ' '.join(anchor_tokens)
-    b = ' '.join(cand)
-    return SequenceMatcher(None, a, b).ratio()
-
+    return SequenceMatcher(None, ' '.join(anchor_tokens), ' '.join(cand)).ratio()
 
 def find_anchor(anchor, words, start_idx):
     tokens = norm(anchor)
-    # Long anchors are more reliable if matched by their opening 5-9 words.
     key = tokens[:min(9, len(tokens))]
     if not key:
         return start_idx, 0.0
@@ -77,14 +71,11 @@ def find_anchor(anchor, words, start_idx):
     hi = min(len(words), start_idx + 320)
     for i in range(lo, hi):
         for d in (-2,-1,0,1,2):
-            n = max(1, len(key)+d)
-            s = score(key, words, i, n)
+            s = score(key, words, i, max(1, len(key)+d))
             if s > best[1]: best = (i, s)
-    # If local matching is weak, broaden while keeping monotonic order.
     if best[1] < 0.72:
         for i in range(max(0,start_idx-2), len(words)):
-            n = len(key)
-            s = score(key, words, i, n)
+            s = score(key, words, i, len(key))
             if s > best[1]: best = (i, s)
             if best[1] > 0.96: break
     return best
@@ -105,7 +96,6 @@ cursor=0
 for n, anchor in enumerate(ANCHORS,1):
     idx, conf = find_anchor(anchor, words, cursor)
     t = words[idx]['start'] if idx < len(words) else (matches[-1]['time'] if matches else 0.0)
-    # Enforce monotonicity; repeated anchors may legitimately start very close together.
     if matches and t < matches[-1]['time']:
         t = matches[-1]['time']
     matches.append({'shot':n,'anchor':anchor,'time':round(t,3),'confidence':round(conf,3),'matched_word':words[idx]['text'] if idx < len(words) else ''})
@@ -114,8 +104,9 @@ for n, anchor in enumerate(ANCHORS,1):
 
 shots=[]
 for i in range(40):
-    start=matches[i]['time']
-    end=matches[i+1]['time']
+    # Keep the first illustration visible through any leading silence.
+    start = 0.0 if i == 0 else matches[i]['time']
+    end = matches[i+1]['time']
     if end <= start:
         end=start+0.35
     shots.append({'shot':i+1,'start':round(start,3),'end':round(end,3),'confidence':matches[i]['confidence']})
