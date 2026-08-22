@@ -6,28 +6,52 @@ on:
     branches: [main]
     paths:
       - 'src/**'
+      - 'scripts/**'
       - 'package.json'
       - '.github/workflows/render.yml'
 
 jobs:
   render:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install FFmpeg and Whisper
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          python -m pip install --upgrade pip
+          python -m pip install openai-whisper
+
+      - name: Align storyboard text to real voiceover
+        run: python scripts/align_audio.py
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Install dependencies
+      - name: Install Remotion dependencies
         run: npm install
 
-      - name: Render MP4
+      - name: Render aligned MP4
         run: npm run render
+
+      - name: Upload alignment diagnostics
+        uses: actions/upload-artifact@v4
+        with:
+          name: alignment-report
+          path: alignment_report.json
+          if-no-files-found: error
+          retention-days: 14
 
       - name: Upload final video
         uses: actions/upload-artifact@v4
