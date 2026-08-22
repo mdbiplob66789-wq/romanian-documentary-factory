@@ -2,6 +2,12 @@ name: Render documentary
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'package.json'
+      - '.github/workflows/render.yml'
 
 jobs:
   render:
