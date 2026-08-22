@@ -13,7 +13,7 @@ on:
 jobs:
   render:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 120
 
     steps:
       - name: Checkout
@@ -31,8 +31,16 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install openai-whisper
 
-      - name: Align storyboard text to real voiceover
+      - name: Align all 160 storyboard anchors to real Romanian voiceover
         run: python scripts/align_audio.py
+
+      - name: Stage local render assets
+        run: |
+          mkdir -p public/shots
+          cp shot_*.jpg public/shots/ 2>/dev/null || true
+          cp shot_*.png public/shots/ 2>/dev/null || true
+          cp ElevenLabs_Kuki_combined.mp3 public/voiceover.mp3
+          test "$(find public/shots -maxdepth 1 -type f \( -name 'shot_*.jpg' -o -name 'shot_*.png' \) | sed -E 's/.*shot_([0-9]{3})\.(jpg|png)/\1/' | sort -u | wc -l)" -eq 160
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -42,7 +50,7 @@ jobs:
       - name: Install Remotion dependencies
         run: npm install
 
-      - name: Render aligned MP4
+      - name: Render full aligned MP4
         run: npm run render
 
       - name: Upload alignment diagnostics
@@ -53,7 +61,7 @@ jobs:
           if-no-files-found: error
           retention-days: 14
 
-      - name: Upload final video
+      - name: Upload full voiceover-only master
         uses: actions/upload-artifact@v4
         with:
           name: final-video
