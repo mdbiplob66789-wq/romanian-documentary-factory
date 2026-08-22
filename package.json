@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "studio": "remotion studio src/index.jsx",
-    "render": "remotion render src/index.jsx DocumentaryTest out/final_video.mp4 --codec=h264 --crf=18"
+    "render": "remotion render src/index.jsx DocumentaryFull out/final_video.mp4 --codec=h264 --crf=20 --audio-bitrate=256k"
   },
   "dependencies": {
     "@remotion/cli": "4.0.506",
