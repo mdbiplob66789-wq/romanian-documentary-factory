@@ -1,0 +1,8 @@
+{
+  "source": "placeholder-overwritten-by-workflow",
+  "language": "ro",
+  "shots": [
+    {"shot":1,"start":0,"end":4},{"shot":2,"start":4,"end":8},{"shot":3,"start":8,"end":12},{"shot":4,"start":12,"end":16},{"shot":5,"start":16,"end":20},{"shot":6,"start":20,"end":24},{"shot":7,"start":24,"end":28},{"shot":8,"start":28,"end":32},{"shot":9,"start":32,"end":36},{"shot":10,"start":36,"end":40},{"shot":11,"start":40,"end":44},{"shot":12,"start":44,"end":48},{"shot":13,"start":48,"end":52},{"shot":14,"start":52,"end":56},{"shot":15,"start":56,"end":60},{"shot":16,"start":60,"end":64},{"shot":17,"start":64,"end":68},{"shot":18,"start":68,"end":72},{"shot":19,"start":72,"end":76},{"shot":20,"start":76,"end":80},{"shot":21,"start":80,"end":84},{"shot":22,"start":84,"end":88},{"shot":23,"start":88,"end":92},{"shot":24,"start":92,"end":96},{"shot":25,"start":96,"end":100},{"shot":26,"start":100,"end":104},{"shot":27,"start":104,"end":108},{"shot":28,"start":108,"end":112},{"shot":29,"start":112,"end":116},{"shot":30,"start":116,"end":120},{"shot":31,"start":120,"end":124},{"shot":32,"start":124,"end":128},{"shot":33,"start":128,"end":132},{"shot":34,"start":132,"end":136},{"shot":35,"start":136,"end":140},{"shot":36,"start":140,"end":144},{"shot":37,"start":144,"end":148},{"shot":38,"start":148,"end":152},{"shot":39,"start":152,"end":156},{"shot":40,"start":156,"end":160}
+  ],
+  "matches": []
+}
