@@ -18,5 +18,15 @@
     "timestamp": "2026-08-23T22:16:45+00:00",
     "commit_hash": "5e5a4b6",
     "push_status": "success"
+  },
+  {
+    "source_file": "/Users/ars/eat for fun/generated_images/shot_084.jpg",
+    "destination": "projects/video_002/shots/video_002_shot_002.jpg",
+    "type": "shot",
+    "shot_number": 2,
+    "sha256": "6033d4f32c136a05a7ecb41d4ddb6f2e6dd280819e3ecc20b642183e0dc69e2a",
+    "timestamp": "2026-08-23T22:17:17+00:00",
+    "commit_hash": "32c0ba6",
+    "push_status": "success"
   }
 ]
