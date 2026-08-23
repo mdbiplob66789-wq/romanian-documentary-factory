@@ -1,0 +1,11 @@
+{
+  "id": "video_XXX",
+  "title": "",
+  "mode": "isolated",
+  "shots": 160,
+  "shots_dir": "shots",
+  "voiceover": "voiceover.mp3",
+  "map": "map.json",
+  "music_dir": "music",
+  "output_name": "video_XXX_FINAL_YOUTUBE.mp4"
+}
