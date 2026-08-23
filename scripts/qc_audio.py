@@ -49,7 +49,22 @@ def measure_loudness(path: Path) -> dict:
     start = text.rfind("{")
     if start == -1:
         fail("Не удалось измерить loudness (loudnorm не вернул JSON).")
-    data = json.loads(text[start:])
+    # Вырезаем ровно один сбалансированный JSON-объект — rfind("{") + голый slice
+    # ловил "Extra data", если после JSON в stderr ещё что-то шло (реальный баг,
+    # пойманный при self-test).
+    depth = 0
+    end = None
+    for i, ch in enumerate(text[start:], start=start):
+        if ch == "{":
+            depth += 1
+        elif ch == "}":
+            depth -= 1
+            if depth == 0:
+                end = i + 1
+                break
+    if end is None:
+        fail("Не удалось распарсить JSON от loudnorm (незакрытые скобки).")
+    data = json.loads(text[start:end])
     return {
         "integrated_lufs": float(data["input_i"]),
         "true_peak_dbtp": float(data["input_tp"]),
