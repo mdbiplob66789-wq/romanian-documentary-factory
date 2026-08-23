@@ -3,11 +3,13 @@
 scripts/new_project.py video_003 — создаёт новый изолированный проект.
 
 projects/video_003/
+  project.json
+  map.json            (пустой placeholder — НЕ anchors другого проекта)
+  music_map.json       (пустой placeholder)
+  upload_state.json
   shots/
   references/{character,environment,props,style,other}/
   music/
-  project.json
-  upload_state.json
 """
 
 import argparse
@@ -54,11 +56,27 @@ def main():
         "id": project_id,
         "status": "draft",
         **DEFAULT_PROJECT_CONFIG,
+        "output_name": f"{project_id}_FINAL_YOUTUBE.mp4",
     }
     (root / "project.json").write_text(
         json.dumps(project_json, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
     (root / "upload_state.json").write_text("[]\n", encoding="utf-8")
+
+    # Пустые placeholder'ы — НЕ копия anchors/narration map другого проекта (п.29 ТЗ).
+    map_placeholder = {"shots": []}
+    (root / "map.json").write_text(json.dumps(map_placeholder, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    music_map_placeholder = {
+        "version": "music_map/v1",
+        "crossfade_sec": 60,
+        "intro_fade_sec": 6,
+        "outro_fade_sec": 10,
+        "blocks": [],
+    }
+    (root / "music_map.json").write_text(
+        json.dumps(music_map_placeholder, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    )
 
     print(f"Проект '{project_id}' создан: {root}")
     print("Структура:")

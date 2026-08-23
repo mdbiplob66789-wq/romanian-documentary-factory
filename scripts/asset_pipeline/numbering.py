@@ -23,7 +23,7 @@ class ShotSequenceError(RuntimeError):
     pass
 
 
-def _shot_re(project_id: str) -> re.Pattern:
+def shot_regex(project_id: str) -> re.Pattern:
     """Regex, матчащий ТОЛЬКО канонические имена шотов данного project_id."""
     return re.compile(
         rf"^{re.escape(project_id)}_shot_(\d{{3}})\.(jpg|jpeg|png|webp)$",
@@ -35,7 +35,7 @@ def scan_shot_numbers(shots_dir: Path, project_id: str) -> list[int]:
     """Реальные номера шотов ЭТОГО project_id на диске, отсортированные по возрастанию."""
     if not shots_dir.is_dir():
         return []
-    pattern = _shot_re(project_id)
+    pattern = shot_regex(project_id)
     numbers = set()
     for entry in shots_dir.iterdir():
         m = pattern.match(entry.name)

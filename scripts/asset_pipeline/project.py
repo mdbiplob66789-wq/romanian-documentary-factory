@@ -21,12 +21,27 @@ from .repo import PROJECTS_DIR
 REFERENCE_CATEGORIES = ("character", "environment", "props", "style", "other")
 
 DEFAULT_PROJECT_CONFIG = {
+    "language": "ro",
     "shots_dir": "shots",
     "references_dir": "references",
     "music_dir": "music",
     "voiceover": "voiceover.mp3",
     "map": "map.json",
+    "music_map": "music_map.json",
 }
+
+# Утверждённые правила музыки (п.12 ТЗ) — фиксированные, не читаются из music_map,
+# чтобы их нельзя было случайно переопределить неверным значением в конкретном проекте.
+VOICE_TARGET_LUFS = -14.0
+MUSIC_BELOW_VOICE_DB = -20.0
+DUCKING_ENABLED = False
+DEFAULT_CROSSFADE_SEC = 60.0
+INTRO_FADE_SEC = 6.0
+OUTRO_FADE_SEC = 10.0
+
+# Approved motion amplitudes (п.8 ТЗ) — должны совпадать 1:1 со значениями в src/Root.jsx.
+MOTION_AMPLITUDE = {"low": 0.04, "medium": 0.07}
+MOTION_AMPLITUDE_HARD_CAP = 0.08
 
 
 class ProjectError(RuntimeError):
@@ -54,6 +69,38 @@ class Project:
     @property
     def upload_state_path(self) -> Path:
         return self.root / "upload_state.json"
+
+    @property
+    def map_path(self) -> Path:
+        return self.root / self.config.get("map", DEFAULT_PROJECT_CONFIG["map"])
+
+    @property
+    def music_map_path(self) -> Path:
+        return self.root / self.config.get("music_map", DEFAULT_PROJECT_CONFIG["music_map"])
+
+    @property
+    def voiceover_path(self) -> Path:
+        return self.root / self.config.get("voiceover", DEFAULT_PROJECT_CONFIG["voiceover"])
+
+    @property
+    def aligned_timeline_path(self) -> Path:
+        return self.root / "aligned_timeline.json"
+
+    @property
+    def alignment_report_path(self) -> Path:
+        return self.root / "alignment_report.json"
+
+    @property
+    def language(self) -> str:
+        return self.config.get("language", DEFAULT_PROJECT_CONFIG["language"])
+
+    @property
+    def output_name(self) -> str:
+        return self.config.get("output_name", f"{self.id}_FINAL_YOUTUBE.mp4")
+
+    @property
+    def visual_master_name(self) -> str:
+        return f"{self.id}_visual_master.mp4"
 
 
 def load_project(project_id: str) -> Project:

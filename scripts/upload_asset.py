@@ -83,15 +83,12 @@ def do_retry_push(project) -> int:
     return 0
 
 
-def maybe_trigger_render():
+def maybe_trigger_render(project_id: str):
     print("\n== --trigger-render ==")
-    print(
-        "ВНИМАНИЕ: render.yml в текущем виде НЕ параметризован по project_id — "
-        "он всегда рендерит корневой (video_001) пайплайн, независимо от того, "
-        "в какой проект вы только что загрузили файл. Это отдельная задача на будущее."
-    )
+    print(f"Запускаю render.yml с project_id={project_id} (никогда не задевает legacy video_001).")
     result = subprocess.run(
-        ["gh", "workflow", "run", "render.yml", "--repo", REMOTE_RENDER_REPO, "--ref", "main"],
+        ["gh", "workflow", "run", "render.yml", "--repo", REMOTE_RENDER_REPO, "--ref", "main",
+         "-f", f"project_id={project_id}"],
         capture_output=True,
         text=True,
     )
@@ -142,7 +139,7 @@ def main():
         handle_reference(args, project, src_path)
 
     if args.trigger_render:
-        maybe_trigger_render()
+        maybe_trigger_render(project.id)
 
 
 def handle_shot(args, project, src_path: Path):
