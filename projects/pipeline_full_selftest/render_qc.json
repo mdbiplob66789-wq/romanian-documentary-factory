@@ -1,0 +1,17 @@
+{
+  "project_id": "pipeline_full_selftest",
+  "shot_count": 5,
+  "first_shot": 1,
+  "last_shot": 5,
+  "missing_shots": [],
+  "duplicate_shots": {},
+  "alignment_min_confidence": 1.0,
+  "voiceover_duration": 16.286729,
+  "video_duration": 16.362667,
+  "duration_diff_sec": 0.07593799999999717,
+  "duration_tolerance_sec": 0.5,
+  "resolution": "1920x1080",
+  "fps": 30.0,
+  "video_codec": "h264",
+  "status": "PASS"
+}

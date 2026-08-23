@@ -1,0 +1,66 @@
+{
+  "project_id": "pipeline_full_selftest",
+  "audio_duration": 16.287,
+  "shots": [
+    {
+      "id": 1,
+      "image": "pipeline_full_selftest_shot_001.jpg",
+      "start": 0.12,
+      "end": 3.5,
+      "motion": "static",
+      "intensity": "low"
+    },
+    {
+      "id": 2,
+      "image": "pipeline_full_selftest_shot_002.jpg",
+      "start": 3.5,
+      "end": 6.52,
+      "motion": "zoom_in",
+      "intensity": "low"
+    },
+    {
+      "id": 3,
+      "image": "pipeline_full_selftest_shot_003.jpg",
+      "start": 6.52,
+      "end": 9.58,
+      "motion": "zoom_out",
+      "intensity": "medium"
+    },
+    {
+      "id": 4,
+      "image": "pipeline_full_selftest_shot_004.jpg",
+      "start": 9.58,
+      "end": 13.12,
+      "motion": "pan_left",
+      "intensity": "low"
+    },
+    {
+      "id": 5,
+      "image": "pipeline_full_selftest_shot_005.jpg",
+      "start": 13.12,
+      "end": 16.287,
+      "motion": "pan_right",
+      "intensity": "medium"
+    }
+  ],
+  "music_blocks": [
+    {
+      "file": "block_01.mp3",
+      "start": 0.12,
+      "end": 9.58,
+      "mood": "dark_ambient",
+      "intensity": "low",
+      "action": "fade_in",
+      "crossfade_sec": 2
+    },
+    {
+      "file": "block_02.mp3",
+      "start": 9.58,
+      "end": 16.287,
+      "mood": "dark_ambient",
+      "intensity": "low",
+      "action": "fade_out",
+      "crossfade_sec": 2
+    }
+  ]
+}

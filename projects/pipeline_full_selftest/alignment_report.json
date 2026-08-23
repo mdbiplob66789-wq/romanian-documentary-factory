@@ -1,0 +1,40 @@
+{
+  "project_id": "pipeline_full_selftest",
+  "audio_duration": 16.286729,
+  "word_count": 48,
+  "shot_count": 5,
+  "min_shot_confidence": 1.0,
+  "shot_anchors": [
+    {
+      "shot": 1,
+      "anchor": "old lighthouse stood silent",
+      "time": 0.12,
+      "confidence": 1.0
+    },
+    {
+      "shot": 2,
+      "anchor": "waves crashed slowly",
+      "time": 3.5,
+      "confidence": 1.0
+    },
+    {
+      "shot": 3,
+      "anchor": "lone fisherman walked",
+      "time": 6.52,
+      "confidence": 1.0
+    },
+    {
+      "shot": 4,
+      "anchor": "clouds drifted past",
+      "time": 9.58,
+      "confidence": 1.0
+    },
+    {
+      "shot": 5,
+      "anchor": "village finally fell quiet",
+      "time": 13.12,
+      "confidence": 1.0
+    }
+  ],
+  "music_block_count": 2
+}
