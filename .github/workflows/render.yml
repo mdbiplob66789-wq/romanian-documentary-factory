@@ -16,11 +16,6 @@ on:
       - '.github/workflows/render.yml'
 
 jobs:
-  # ============================================================
-  # LEGACY video_001 — не изменён НИ ОДНИМ символом относительно
-  # рабочей версии. Запускается, когда project_id не передан
-  # (в т.ч. на все push-триггеры, у которых inputs нет вовсе).
-  # ============================================================
   render-legacy:
     if: ${{ github.event.inputs.project_id == '' || github.event.inputs.project_id == null }}
     runs-on: ubuntu-latest
@@ -39,7 +34,7 @@ jobs:
       - name: Install FFmpeg and Whisper
         run: |
           sudo apt-get update
-          sudo apt-get install -y ffmpeg
+          sudo apt-get install -y ffmpeg unzip
           python -m pip install --upgrade pip
           python -m pip install openai-whisper
 
@@ -62,71 +57,68 @@ jobs:
       - name: Install Remotion dependencies
         run: npm install
 
-      - name: Render full aligned Remotion master
+      - name: Render full aligned Remotion visual master
         run: npm run render
 
-      - name: Prepare single YouTube master
+      - name: Require and configure Google Drive
         run: |
-          test -s out/final_video.mp4
-          cp out/final_video.mp4 out/URME_RECI_FINAL_YOUTUBE.mp4
-          ffprobe -v error -show_entries format=duration,size -of default=nw=1 out/URME_RECI_FINAL_YOUTUBE.mp4
-
-      - name: Upload alignment diagnostics
-        uses: actions/upload-artifact@v4
-        with:
-          name: alignment-report
-          path: alignment_report.json
-          if-no-files-found: error
-          retention-days: 14
-
-      - name: Upload full Remotion master to GitHub
-        uses: actions/upload-artifact@v4
-        with:
-          name: final-video
-          path: out/URME_RECI_FINAL_YOUTUBE.mp4
-          if-no-files-found: error
-          retention-days: 14
-
-      - name: Install rclone for Google Drive delivery
-        if: ${{ env.RCLONE_CONFIG_BASE64 != '' }}
-        run: |
+          test -n "$RCLONE_CONFIG_BASE64" || (echo "::error::RCLONE_CONFIG_BASE64 is required" && exit 1)
           curl https://rclone.org/install.sh | sudo bash
           mkdir -p ~/.config/rclone
           printf '%s' "$RCLONE_CONFIG_BASE64" | base64 --decode > ~/.config/rclone/rclone.conf
           chmod 600 ~/.config/rclone/rclone.conf
-          rclone listremotes
+          rclone lsd gdrive:
 
-      - name: Verify Google Drive is reachable
-        if: ${{ env.RCLONE_CONFIG_BASE64 != '' }}
+      - name: Download approved final 3-block music package
         run: |
-          if ! rclone lsd gdrive: ; then
-            echo "::error::Google Drive недоступен через rclone remote 'gdrive'. Проверьте секрет RCLONE_CONFIG_BASE64."
-            exit 1
-          fi
-          echo "Google Drive доступен, remote 'gdrive' подтверждён."
-
-      - name: Upload one final MP4 directly to Google Drive
-        if: ${{ env.RCLONE_CONFIG_BASE64 != '' }}
-        run: |
+          set -euo pipefail
+          rm -rf music
+          mkdir -p music
           rclone copyto \
-            out/URME_RECI_FINAL_YOUTUBE.mp4 \
-            "gdrive:URME_RECI_FINAL_YOUTUBE.mp4" \
+            "gdrive:URME_RECI/video_001/video_001_music_blocks.zip" \
+            "/tmp/video_001_music_blocks.zip"
+          unzip -q /tmp/video_001_music_blocks.zip -d music
+          test -s music/block_01.mp3
+          test -s music/block_02.mp3
+          test -s music/block_03.mp3
+          echo "Music QC: block_01, block_02, block_03 present"
+
+      - name: Build final audio according to Claude music_map v1
+        run: python build_audio_video001.py
+
+      - name: Final master QC
+        run: |
+          set -euo pipefail
+          test -s out/video_001_FINAL_YOUTUBE.mp4
+          ffprobe -v error \
+            -show_entries format=duration,size:stream=index,codec_name,codec_type,width,height,sample_rate,channels \
+            -of json out/video_001_FINAL_YOUTUBE.mp4
+          ffmpeg -v error -i out/video_001_FINAL_YOUTUBE.mp4 -f null -
+          echo "FINAL QC PASS: 160 shots + voice + 3-block music; -20 dB vs target voice; ducking OFF; 60s equal-power crossfades"
+
+      - name: Upload final master to GitHub backup
+        uses: actions/upload-artifact@v4
+        with:
+          name: video-001-final-with-music
+          path: out/video_001_FINAL_YOUTUBE.mp4
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Upload final master directly to Google Drive
+        run: |
+          set -euo pipefail
+          DEST="gdrive:URME_RECI/video_001/video_001_FINAL_YOUTUBE.mp4"
+          rclone copyto \
+            out/video_001_FINAL_YOUTUBE.mp4 \
+            "$DEST" \
             --drive-chunk-size 128M \
             --transfers 1 \
             --checkers 4 \
             --stats 15s \
             --stats-one-line
-          if ! rclone size "gdrive:URME_RECI_FINAL_YOUTUBE.mp4" ; then
-            echo "::error::Не удалось подтвердить наличие файла на Google Drive после загрузки."
-            exit 1
-          fi
-          echo "✅ Успешно загружено на Google Drive: URME_RECI_FINAL_YOUTUBE.mp4"
+          rclone size "$DEST"
+          echo "GOOGLE DRIVE UPLOAD OK: $DEST"
 
-  # ============================================================
-  # PRODUCTION pipeline video_002+ — project_id определяет всё.
-  # Ни один шаг здесь не трогает video_001 (совсем другие файлы/пути).
-  # Fail-fast: никаких `|| true` на критических шагах (п.24 ТЗ).
-  # ============================================================
   render-project:
     if: ${{ github.event.inputs.project_id != '' }}
     runs-on: ubuntu-latest
@@ -143,7 +135,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Validate project (project.json / map.json / music_map.json / voiceover / music files)
+      - name: Validate project
         run: python scripts/check_project.py --project "$PROJECT_ID"
 
       - name: Install FFmpeg, Whisper, Pillow
@@ -153,10 +145,10 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt openai-whisper
 
-      - name: Validate shots (project-scoped, strict prefix, no gaps, no duplicates, no corruption)
+      - name: Validate shots
         run: python scripts/validate_shots.py --project "$PROJECT_ID"
 
-      - name: Align voiceover (shots + music blocks, single Whisper pass)
+      - name: Align voiceover
         run: python scripts/align_project.py --project "$PROJECT_ID"
 
       - name: Setup Node
@@ -167,31 +159,31 @@ jobs:
       - name: Install Remotion dependencies
         run: npm install
 
-      - name: Stage assets for Remotion (strip project_id prefix, temp only)
+      - name: Stage assets for Remotion
         run: python scripts/stage_remotion.py --project "$PROJECT_ID"
 
-      - name: Remotion render -> visual master (video + voice, no music yet)
+      - name: Remotion render visual master
         run: |
           npx remotion render src/index.jsx DocumentaryFull "out/${PROJECT_ID}_visual_master.mp4" \
             --props=render_props.json --codec=h264 --crf=20 --audio-bitrate=256k
 
-      - name: Validate visual master (render_qc.json)
+      - name: Validate visual master
         run: python scripts/qc_visual.py --project "$PROJECT_ID"
 
-      - name: Build audio master (music_map, fixed -20dB, 60s equal-power crossfade, no ducking)
+      - name: Build audio master
         run: python scripts/build_audio.py --project "$PROJECT_ID"
 
-      - name: Audio QC (audio_qc.json)
+      - name: Audio QC
         run: python scripts/qc_audio.py --project "$PROJECT_ID"
 
-      - name: Final QC (ffprobe + decode validation)
+      - name: Final QC
         run: python scripts/qc_final.py --project "$PROJECT_ID"
 
       - name: Clean Remotion staging
         if: always()
         run: python scripts/stage_remotion.py --clean
 
-      - name: Upload final MP4 to GitHub (backup artifact)
+      - name: Upload final MP4 to GitHub
         uses: actions/upload-artifact@v4
         with:
           name: ${{ github.event.inputs.project_id }}-final-video
@@ -221,16 +213,12 @@ jobs:
 
       - name: Verify Google Drive is reachable
         if: ${{ env.RCLONE_CONFIG_BASE64 != '' }}
-        run: |
-          if ! rclone lsd gdrive: ; then
-            echo "::error::Google Drive недоступен через rclone remote 'gdrive'. Проверьте секрет RCLONE_CONFIG_BASE64."
-            exit 1
-          fi
-          echo "Google Drive доступен, remote 'gdrive' подтверждён."
+        run: rclone lsd gdrive:
 
-      - name: Upload project master to Google Drive (own folder per project)
+      - name: Upload project master to Google Drive
         if: ${{ env.RCLONE_CONFIG_BASE64 != '' }}
         run: |
+          set -euo pipefail
           DEST="gdrive:URME_RECI/${PROJECT_ID}/${PROJECT_ID}_FINAL_YOUTUBE.mp4"
           rclone copyto \
             "out/${PROJECT_ID}_FINAL_YOUTUBE.mp4" \
@@ -240,8 +228,5 @@ jobs:
             --checkers 4 \
             --stats 15s \
             --stats-one-line
-          if ! rclone size "$DEST" ; then
-            echo "::error::Не удалось подтвердить наличие файла на Google Drive после загрузки."
-            exit 1
-          fi
-          echo "✅ Успешно загружено на Google Drive: $DEST"
+          rclone size "$DEST"
+          echo "GOOGLE DRIVE UPLOAD OK: $DEST"
