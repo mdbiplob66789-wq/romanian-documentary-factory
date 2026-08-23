@@ -14,21 +14,27 @@ jobs:
   render:
     runs-on: ubuntu-latest
     timeout-minutes: 120
+    env:
+      RCLONE_CONFIG_BASE64: ${{ secrets.RCLONE_CONFIG_BASE64 }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+
       - name: Install FFmpeg and Whisper
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg
           python -m pip install --upgrade pip
           python -m pip install openai-whisper
+
       - name: Align final Claude 160-shot map to Romanian voiceover
         run: python scripts/align_final.py
+
       - name: Stage render assets and enforce 160 unique shots
         run: |
           mkdir -p public/shots
@@ -36,14 +42,24 @@ jobs:
           cp shot_*.png public/shots/ 2>/dev/null || true
           cp ElevenLabs_Kuki_combined.mp3 public/voiceover.mp3
           test "$(find public/shots -maxdepth 1 -type f \( -name 'shot_*.jpg' -o -name 'shot_*.png' \) | sed -E 's/.*shot_([0-9]{3})\.(jpg|png)/\1/' | sort -u | wc -l)" -eq 160
+
       - name: Setup Node
         uses: actions/setup-node@v5
         with:
           node-version: 20
+
       - name: Install Remotion dependencies
         run: npm install
+
       - name: Render full aligned Remotion master
         run: npm run render
+
+      - name: Prepare single YouTube master
+        run: |
+          test -s out/final_video.mp4
+          cp out/final_video.mp4 out/URME_RECI_FINAL_YOUTUBE.mp4
+          ffprobe -v error -show_entries format=duration,size -of default=nw=1 out/URME_RECI_FINAL_YOUTUBE.mp4
+
       - name: Upload alignment diagnostics
         uses: actions/upload-artifact@v4
         with:
@@ -51,10 +67,33 @@ jobs:
           path: alignment_report.json
           if-no-files-found: error
           retention-days: 14
-      - name: Upload full Remotion master
+
+      - name: Upload full Remotion master to GitHub
         uses: actions/upload-artifact@v4
         with:
           name: final-video
-          path: out/final_video.mp4
+          path: out/URME_RECI_FINAL_YOUTUBE.mp4
           if-no-files-found: error
           retention-days: 14
+
+      - name: Install rclone for Google Drive delivery
+        if: ${{ env.RCLONE_CONFIG_BASE64 != '' }}
+        run: |
+          curl https://rclone.org/install.sh | sudo bash
+          mkdir -p ~/.config/rclone
+          printf '%s' "$RCLONE_CONFIG_BASE64" | base64 --decode > ~/.config/rclone/rclone.conf
+          chmod 600 ~/.config/rclone/rclone.conf
+          rclone listremotes
+
+      - name: Upload one final MP4 directly to Google Drive
+        if: ${{ env.RCLONE_CONFIG_BASE64 != '' }}
+        run: |
+          rclone copyto \
+            out/URME_RECI_FINAL_YOUTUBE.mp4 \
+            "gdrive:URME_RECI_FINAL_YOUTUBE.mp4" \
+            --drive-chunk-size 128M \
+            --transfers 1 \
+            --checkers 4 \
+            --stats 15s \
+            --stats-one-line
+          rclone size "gdrive:URME_RECI_FINAL_YOUTUBE.mp4"
