@@ -28,5 +28,15 @@
     "timestamp": "2026-08-23T23:08:12+00:00",
     "commit_hash": "92d88be",
     "push_status": "success"
+  },
+  {
+    "source_file": "/Users/ars/eat for fun/generated_images/shot_013.jpg",
+    "destination": "projects/pipeline_full_selftest/shots/pipeline_full_selftest_shot_004.jpg",
+    "type": "shot",
+    "shot_number": 4,
+    "sha256": "e5c2ce4cfd5a712f103aa2f3228b00aebc30956cfe26d8cfa76819b864185f74",
+    "timestamp": "2026-08-23T23:08:17+00:00",
+    "commit_hash": "abfbb7e",
+    "push_status": "success"
   }
 ]
