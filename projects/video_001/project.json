@@ -1,0 +1,11 @@
+{
+  "id": "video_001",
+  "title": "URME RECI — Vasile Gorgos",
+  "mode": "legacy_root",
+  "shots": 160,
+  "shots_dir": "../../",
+  "voiceover": "../../ElevenLabs_Kuki_combined.mp3",
+  "alignment": "../../scripts/align_final.py",
+  "output_name": "URME_RECI_FINAL_YOUTUBE.mp4",
+  "notes": "Existing production is intentionally left in the repository root so the proven render is not disturbed. New projects use isolated project folders."
+}
