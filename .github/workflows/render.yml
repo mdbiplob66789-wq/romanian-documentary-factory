@@ -2,6 +2,11 @@ name: Render documentary
 
 on:
   workflow_dispatch:
+    inputs:
+      project_id:
+        description: Project folder ID (for example video_001 or video_002)
+        required: true
+        default: video_001
   push:
     branches: [main]
     paths:
@@ -16,9 +21,23 @@ jobs:
     timeout-minutes: 120
     env:
       RCLONE_CONFIG_BASE64: ${{ secrets.RCLONE_CONFIG_BASE64 }}
+      PROJECT_ID: ${{ github.event.inputs.project_id || 'video_001' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Resolve project
+        shell: bash
+        run: |
+          set -euo pipefail
+          CONFIG="projects/${PROJECT_ID}/project.json"
+          test -f "$CONFIG"
+          MODE="$(python -c 'import json,sys; print(json.load(open(sys.argv[1]))["mode"])' "$CONFIG")"
+          OUTPUT_NAME="$(python -c 'import json,sys; print(json.load(open(sys.argv[1])).get("output_name", sys.argv[2] + "_FINAL_YOUTUBE.mp4"))' "$CONFIG" "$PROJECT_ID")"
+          echo "PROJECT_MODE=$MODE" >> "$GITHUB_ENV"
+          echo "OUTPUT_NAME=$OUTPUT_NAME" >> "$GITHUB_ENV"
+          echo "Selected project: $PROJECT_ID ($MODE)"
+          echo "Output: $OUTPUT_NAME"
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -32,16 +51,37 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install openai-whisper
 
-      - name: Align final Claude 160-shot map to Romanian voiceover
+      - name: Align legacy video_001
+        if: ${{ env.PROJECT_MODE == 'legacy_root' }}
         run: python scripts/align_final.py
 
-      - name: Stage render assets and enforce 160 unique shots
+      - name: Align isolated project
+        if: ${{ env.PROJECT_MODE == 'isolated' }}
+        run: python scripts/align_project.py "projects/${PROJECT_ID}"
+
+      - name: Stage render assets
+        shell: bash
         run: |
+          set -euo pipefail
+          rm -rf public/shots
           mkdir -p public/shots
-          cp shot_*.jpg public/shots/ 2>/dev/null || true
-          cp shot_*.png public/shots/ 2>/dev/null || true
-          cp ElevenLabs_Kuki_combined.mp3 public/voiceover.mp3
-          test "$(find public/shots -maxdepth 1 -type f \( -name 'shot_*.jpg' -o -name 'shot_*.png' \) | sed -E 's/.*shot_([0-9]{3})\.(jpg|png)/\1/' | sort -u | wc -l)" -eq 160
+          if [ "$PROJECT_MODE" = "legacy_root" ]; then
+            cp shot_*.jpg public/shots/ 2>/dev/null || true
+            cp shot_*.png public/shots/ 2>/dev/null || true
+            cp ElevenLabs_Kuki_combined.mp3 public/voiceover.mp3
+            EXPECTED=160
+          else
+            CONFIG="projects/${PROJECT_ID}/project.json"
+            EXPECTED="$(python -c 'import json,sys; print(int(json.load(open(sys.argv[1])).get("shots",160)))' "$CONFIG")"
+            SHOTS_DIR="projects/${PROJECT_ID}/$(python -c 'import json,sys; print(json.load(open(sys.argv[1])).get("shots_dir","shots"))' "$CONFIG")"
+            VOICE="projects/${PROJECT_ID}/$(python -c 'import json,sys; print(json.load(open(sys.argv[1])).get("voiceover","voiceover.mp3"))' "$CONFIG")"
+            cp "$SHOTS_DIR"/shot_*.jpg public/shots/ 2>/dev/null || true
+            cp "$SHOTS_DIR"/shot_*.png public/shots/ 2>/dev/null || true
+            cp "$VOICE" public/voiceover.mp3
+          fi
+          ACTUAL="$(find public/shots -maxdepth 1 -type f \( -name 'shot_*.jpg' -o -name 'shot_*.png' \) | sed -E 's/.*shot_([0-9]{3})\.(jpg|png)/\1/' | sort -u | wc -l | tr -d ' ')"
+          test "$ACTUAL" -eq "$EXPECTED"
+          echo "QC: staged $ACTUAL/$EXPECTED unique shots for $PROJECT_ID"
 
       - name: Setup Node
         uses: actions/setup-node@v5
@@ -56,14 +96,15 @@ jobs:
 
       - name: Prepare single YouTube master
         run: |
+          set -euo pipefail
           test -s out/final_video.mp4
-          cp out/final_video.mp4 out/URME_RECI_FINAL_YOUTUBE.mp4
-          ffprobe -v error -show_entries format=duration,size -of default=nw=1 out/URME_RECI_FINAL_YOUTUBE.mp4
+          cp out/final_video.mp4 "out/${OUTPUT_NAME}"
+          ffprobe -v error -show_entries format=duration,size -of default=nw=1 "out/${OUTPUT_NAME}"
 
       - name: Upload alignment diagnostics
         uses: actions/upload-artifact@v4
         with:
-          name: alignment-report
+          name: ${{ env.PROJECT_ID }}-alignment-report
           path: alignment_report.json
           if-no-files-found: error
           retention-days: 14
@@ -71,14 +112,15 @@ jobs:
       - name: Upload full Remotion master to GitHub
         uses: actions/upload-artifact@v4
         with:
-          name: final-video
-          path: out/URME_RECI_FINAL_YOUTUBE.mp4
+          name: ${{ env.PROJECT_ID }}-final-video
+          path: out/${{ env.OUTPUT_NAME }}
           if-no-files-found: error
           retention-days: 14
 
       - name: Install rclone for Google Drive delivery
         if: ${{ env.RCLONE_CONFIG_BASE64 != '' }}
         run: |
+          set -euo pipefail
           curl https://rclone.org/install.sh | sudo bash
           mkdir -p ~/.config/rclone
           printf '%s' "$RCLONE_CONFIG_BASE64" | base64 --decode > ~/.config/rclone/rclone.conf
@@ -88,25 +130,28 @@ jobs:
       - name: Verify Google Drive is reachable
         if: ${{ env.RCLONE_CONFIG_BASE64 != '' }}
         run: |
+          set -euo pipefail
           if ! rclone lsd gdrive: ; then
-            echo "::error::Google Drive недоступен через rclone remote 'gdrive'. Проверьте секрет RCLONE_CONFIG_BASE64."
+            echo "::error::Google Drive is not reachable through rclone remote gdrive."
             exit 1
           fi
-          echo "Google Drive доступен, remote 'gdrive' подтверждён."
+          echo "Google Drive remote gdrive is reachable."
 
       - name: Upload one final MP4 directly to Google Drive
         if: ${{ env.RCLONE_CONFIG_BASE64 != '' }}
         run: |
+          set -euo pipefail
+          DEST="gdrive:URME_RECI/${PROJECT_ID}/${OUTPUT_NAME}"
           rclone copyto \
-            out/URME_RECI_FINAL_YOUTUBE.mp4 \
-            "gdrive:URME_RECI_FINAL_YOUTUBE.mp4" \
+            "out/${OUTPUT_NAME}" \
+            "$DEST" \
             --drive-chunk-size 128M \
             --transfers 1 \
             --checkers 4 \
             --stats 15s \
             --stats-one-line
-          if ! rclone size "gdrive:URME_RECI_FINAL_YOUTUBE.mp4" ; then
-            echo "::error::Не удалось подтвердить наличие файла на Google Drive после загрузки."
+          if ! rclone size "$DEST" ; then
+            echo "::error::Could not verify the uploaded Google Drive file."
             exit 1
           fi
-          echo "✅ Успешно загружено на Google Drive: URME_RECI_FINAL_YOUTUBE.mp4"
+          echo "GOOGLE DRIVE UPLOAD OK: URME_RECI/${PROJECT_ID}/${OUTPUT_NAME}"
