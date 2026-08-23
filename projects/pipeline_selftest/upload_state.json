@@ -1,0 +1,102 @@
+[
+  {
+    "source_file": "/Users/ars/eat for fun/generated_images/shot_050.jpg",
+    "destination": "projects/pipeline_selftest/shots/shot_001.jpg",
+    "type": "shot",
+    "shot_number": 1,
+    "sha256": "24ebcf41bba2352114f5d8c3648c93a39cef5a73e464ee8eb7144ce03e583d41",
+    "timestamp": "2026-08-23T22:02:48+00:00",
+    "commit_hash": "c0ce497",
+    "push_status": "success"
+  },
+  {
+    "source_file": "/Users/ars/eat for fun/generated_images/shot_051.jpg",
+    "destination": "projects/pipeline_selftest/shots/shot_002.jpg",
+    "type": "shot",
+    "shot_number": 2,
+    "sha256": "83e8581acd175eebdc487f94b733e5c14cb9ce306e06c2fef5184d5c905b40fe",
+    "timestamp": "2026-08-23T22:02:56+00:00",
+    "commit_hash": "8fc2149",
+    "push_status": "success"
+  },
+  {
+    "source_file": "/Users/ars/eat for fun/generated_images/shot_052.jpg",
+    "destination": "projects/pipeline_selftest/shots/shot_003.jpg",
+    "type": "shot",
+    "shot_number": 3,
+    "sha256": "458002d90a65919b422fcc2d3cffe84df41009e0fc1f8cecf6ebd9a78fa3ac42",
+    "timestamp": "2026-08-23T22:02:59+00:00",
+    "commit_hash": "b9ac2d5",
+    "push_status": "success"
+  },
+  {
+    "source_file": "/Users/ars/eat for fun/generated_images/shot_055.jpg",
+    "destination": "projects/pipeline_selftest/shots/shot_002.jpg",
+    "type": "shot",
+    "shot_number": 2,
+    "sha256": "05ae39a0dd270f83492e2f2e4618d2094f041e6c082807f2994bb2321add4c0d",
+    "timestamp": "2026-08-23T22:03:48+00:00",
+    "commit_hash": "8580f8e",
+    "push_status": "success"
+  },
+  {
+    "source_file": "/Users/ars/eat for fun/generated_images/shot_056.jpg",
+    "destination": "projects/pipeline_selftest/shots/shot_004.jpg",
+    "type": "shot",
+    "shot_number": 4,
+    "sha256": "df7b4b738a2dcb0d5f429e7525e5e07c7cdb5c42641800b819c70469f4b5b937",
+    "timestamp": "2026-08-23T22:03:52+00:00",
+    "commit_hash": "005b59b",
+    "push_status": "success"
+  },
+  {
+    "source_file": "/Users/ars/eat for fun/generated_images/shot_060.jpg",
+    "destination": "projects/pipeline_selftest/references/character/main_character.png",
+    "type": "reference",
+    "shot_number": null,
+    "sha256": "dfd57d93d03872bf88e14edac35e27cec202a776a7342ae3619673efb26edfa2",
+    "timestamp": "2026-08-23T22:04:06+00:00",
+    "commit_hash": "44348bd",
+    "push_status": "success"
+  },
+  {
+    "source_file": "/Users/ars/eat for fun/generated_images/shot_063.jpg",
+    "destination": "projects/pipeline_selftest/references/character/main_character.png",
+    "type": "reference",
+    "shot_number": null,
+    "sha256": "4d21760b4597452bee336b887091bd7736032567cd830ec48ffad9bb6473ee6a",
+    "timestamp": "2026-08-23T22:04:22+00:00",
+    "commit_hash": "c4d0669",
+    "push_status": "success"
+  },
+  {
+    "source_file": "/Users/ars/eat for fun/generated_images/shot_064.jpg",
+    "destination": "projects/pipeline_selftest/shots/shot_005.jpg",
+    "type": "shot",
+    "shot_number": 5,
+    "sha256": "7786dafa5dfe2805c7bed853003bdf5e243017085f77fc60630bb31cb08210ca",
+    "timestamp": "2026-08-23T22:05:02+00:00",
+    "commit_hash": "7d59596",
+    "push_status": "success"
+  },
+  {
+    "source_file": "/Users/ars/UrmeReci/inbox/pipeline_selftest/shots/shot_070.jpg",
+    "destination": "projects/pipeline_selftest/shots/shot_006.jpg",
+    "type": "shot",
+    "shot_number": 6,
+    "sha256": "e41935b4da56eeaa02f11a7f981c0d99bfb6750c6c19519bd09379f9f6bc6e06",
+    "timestamp": "2026-08-23T22:05:31+00:00",
+    "commit_hash": "5df269d",
+    "push_status": "success"
+  },
+  {
+    "source_file": "/Users/ars/UrmeReci/inbox/pipeline_selftest/references/character/test_env_ref.jpg",
+    "destination": "projects/pipeline_selftest/references/character/test_env_ref.png",
+    "type": "reference",
+    "shot_number": null,
+    "sha256": "647465bc63ce633c414dc9de67090e97702584bc2b0f8cffd21e193b1de3a7ba",
+    "timestamp": "2026-08-23T22:05:37+00:00",
+    "commit_hash": "dbeaaaa",
+    "push_status": "success"
+  }
+]
