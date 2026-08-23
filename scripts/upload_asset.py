@@ -78,6 +78,7 @@ def do_retry_push(project) -> int:
     project.upload_state_path.write_text(
         json.dumps(records, ensure_ascii=False, indent=2), encoding="utf-8"
     )
+    _commit_and_push_state_file(project, f"retry-push flushed {len(failed)} record(s)")
     print(f"push прошёл успешно. {len(failed)} записей обновлены на 'success'.")
     return 0
 
@@ -216,6 +217,25 @@ def handle_reference(args, project, src_path: Path):
     finish_upload(project, src_path, dst_path, relative_path, "reference", None, commit_message)
 
 
+def _commit_and_push_state_file(project, note: str):
+    """
+    upload_state.json — отслеживаемый git-файл. Если менять его на диске и не коммитить,
+    следующий 'git pull --rebase' спотыкается об незакоммиченные изменения (реальный баг,
+    пойманный при повторном тестировании). Поэтому после каждой правки state.json —
+    отдельный маленький коммит. Если push здесь не пройдёт — не страшно: он уедет вместе
+    с основным коммитом при следующем --retry-push (один 'git push' отправляет все
+    накопленные локальные коммиты разом).
+    """
+    state_relative = str(project.upload_state_path.relative_to(REPO_ROOT))
+    try:
+        gitops.add_file(REPO_ROOT, state_relative)
+        gitops.commit(REPO_ROOT, f"Update upload_state.json for {project.id} ({note})")
+    except gitops.GitError:
+        return False
+    ok, _ = gitops.push(REPO_ROOT)
+    return ok
+
+
 def finish_upload(project, src_path, dst_path, relative_path, asset_type, shot_number, commit_message):
     sha256 = state.sha256_of(dst_path)
 
@@ -234,6 +254,7 @@ def finish_upload(project, src_path, dst_path, relative_path, asset_type, shot_n
             commit_hash=None,
         )
         state.append_state_record(project.upload_state_path, record)
+        _commit_and_push_state_file(project, "asset commit failed")
         fail(f"{e}\nФайл сохранён локально ({dst_path}), но не закоммичен. Разберитесь с git и повторите.")
         return
 
@@ -248,6 +269,7 @@ def finish_upload(project, src_path, dst_path, relative_path, asset_type, shot_n
         commit_hash=commit_hash,
     )
     state.append_state_record(project.upload_state_path, record)
+    _commit_and_push_state_file(project, f"{asset_type} {relative_path}")
 
     if not ok:
         fail(
