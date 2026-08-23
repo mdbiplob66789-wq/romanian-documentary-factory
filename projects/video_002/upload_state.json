@@ -48,5 +48,15 @@
     "timestamp": "2026-08-23T22:17:48+00:00",
     "commit_hash": "7b8a8fd",
     "push_status": "success"
+  },
+  {
+    "source_file": "/Users/ars/UrmeReci/inbox/video_002/shots/shot_088.jpg",
+    "destination": "projects/video_002/shots/video_002_shot_005.jpg",
+    "type": "shot",
+    "shot_number": 5,
+    "sha256": "65abbf15ac3967a22f45c021dd185ce3781cde607c5a85ca1df6fb74fb6966a6",
+    "timestamp": "2026-08-23T22:17:58+00:00",
+    "commit_hash": "6f09632",
+    "push_status": "success"
   }
 ]
