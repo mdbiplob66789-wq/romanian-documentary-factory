@@ -1,0 +1,43 @@
+{
+  "shots": [
+    {
+      "SHOT": 1,
+      "START_TEXT": "old lighthouse stood silent",
+      "END_TEXT": "waves crashed slowly",
+      "MOTION": "static",
+      "INTENSITY": "low",
+      "VISUAL": "Lighthouse at dawn"
+    },
+    {
+      "SHOT": 2,
+      "START_TEXT": "waves crashed slowly",
+      "END_TEXT": "lone fisherman walked",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low",
+      "VISUAL": "Rocky northern shore"
+    },
+    {
+      "SHOT": 3,
+      "START_TEXT": "lone fisherman walked",
+      "END_TEXT": "clouds drifted past",
+      "MOTION": "zoom_out",
+      "INTENSITY": "medium",
+      "VISUAL": "Empty harbor"
+    },
+    {
+      "SHOT": 4,
+      "START_TEXT": "clouds drifted past",
+      "END_TEXT": "village finally fell quiet",
+      "MOTION": "pan_left",
+      "INTENSITY": "low",
+      "VISUAL": "Abandoned watchtower"
+    },
+    {
+      "SHOT": 5,
+      "START_TEXT": "village finally fell quiet",
+      "MOTION": "pan_right",
+      "INTENSITY": "medium",
+      "VISUAL": "Evening light fading"
+    }
+  ]
+}

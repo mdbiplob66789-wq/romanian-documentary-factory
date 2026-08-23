@@ -1,0 +1,12 @@
+{
+  "id": "pipeline_full_selftest",
+  "status": "selftest",
+  "language": "en",
+  "shots_dir": "shots",
+  "references_dir": "references",
+  "music_dir": "music",
+  "voiceover": "voiceover.mp3",
+  "map": "map.json",
+  "music_map": "music_map.json",
+  "output_name": "pipeline_full_selftest_FINAL_YOUTUBE.mp4"
+}

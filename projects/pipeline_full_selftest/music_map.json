@@ -1,0 +1,22 @@
+{
+  "version": "music_map/v1",
+  "crossfade_sec": 2,
+  "intro_fade_sec": 1,
+  "outro_fade_sec": 1,
+  "blocks": [
+    {
+      "file": "block_01.mp3",
+      "start_text": "old lighthouse stood silent",
+      "mood": "dark_ambient",
+      "intensity": "low",
+      "action": "fade_in"
+    },
+    {
+      "file": "block_02.mp3",
+      "start_text": "clouds drifted past",
+      "mood": "dark_ambient",
+      "intensity": "low",
+      "action": "fade_out"
+    }
+  ]
+}
