@@ -1,9 +1,0 @@
-{
-  "id": "pipeline_selftest",
-  "status": "draft",
-  "shots_dir": "shots",
-  "references_dir": "references",
-  "music_dir": "music",
-  "voiceover": "voiceover.mp3",
-  "map": "map.json"
-}
