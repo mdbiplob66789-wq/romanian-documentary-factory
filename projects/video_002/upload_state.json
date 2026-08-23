@@ -58,5 +58,15 @@
     "timestamp": "2026-08-23T22:17:58+00:00",
     "commit_hash": "6f09632",
     "push_status": "success"
+  },
+  {
+    "source_file": "/Users/ars/UrmeReci/inbox/video_002/references/props/ticket.jpg",
+    "destination": "projects/video_002/references/props/video_002_ref_props_ticket.png",
+    "type": "reference",
+    "shot_number": null,
+    "sha256": "b349eac1d8ab2506ecb8e7bb0586ae7e5c7c134a6b5bbccf1bec12dc335f0b80",
+    "timestamp": "2026-08-23T22:18:06+00:00",
+    "commit_hash": "aaa3dfb",
+    "push_status": "success"
   }
 ]
