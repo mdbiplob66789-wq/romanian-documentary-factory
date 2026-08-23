@@ -4,21 +4,30 @@ scripts/upload_asset.py — загрузка одного изображения
 
 Примеры:
   python scripts/upload_asset.py image.png --project video_002 --shot 17
+    -> projects/video_002/shots/video_002_shot_017.jpg
   python scripts/upload_asset.py image.png --project video_002 --next
   python scripts/upload_asset.py reference.png --project video_002 --reference character --name main_character
+    -> projects/video_002/references/character/video_002_ref_character_main_character.png
   python scripts/upload_asset.py --project video_002 --retry-push
 
 Главный принцип: PROJECT_ID определяет всё. Никакой глобальной нумерации на весь репозиторий.
+
+Canonical filename для шотов (обязателен с video_002, video_001 — legacy, не трогается):
+    {project_id}_shot_{number:03d}.{ext}
+Canonical filename для references:
+    {project_id}_ref_{category}_{name}.{ext}
 """
 
 import argparse
+import json
+import subprocess
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from asset_pipeline import gitops, imageops, numbering, state
-from asset_pipeline.naming import UnsafeNameError, validate_safe_name
+from asset_pipeline.naming import UnsafeNameError, reference_stem, validate_safe_name
 from asset_pipeline.project import REFERENCE_CATEGORIES, ProjectError, load_project
 from asset_pipeline.repo import REPO_ROOT
 
@@ -67,7 +76,7 @@ def do_retry_push(project) -> int:
     for r in failed:
         r["push_status"] = "success"
     project.upload_state_path.write_text(
-        __import__("json").dumps(records, ensure_ascii=False, indent=2), encoding="utf-8"
+        json.dumps(records, ensure_ascii=False, indent=2), encoding="utf-8"
     )
     print(f"push прошёл успешно. {len(failed)} записей обновлены на 'success'.")
     return 0
@@ -80,7 +89,7 @@ def maybe_trigger_render():
         "он всегда рендерит корневой (video_001) пайплайн, независимо от того, "
         "в какой проект вы только что загрузили файл. Это отдельная задача на будущее."
     )
-    result = __import__("subprocess").run(
+    result = subprocess.run(
         ["gh", "workflow", "run", "render.yml", "--repo", REMOTE_RENDER_REPO, "--ref", "main"],
         capture_output=True,
         text=True,
@@ -138,20 +147,22 @@ def main():
 def handle_shot(args, project, src_path: Path):
     shots_dir = project.shots_dir
     shots_dir.mkdir(parents=True, exist_ok=True)
+    project_id = project.id
 
     if args.next:
         try:
-            shot_number = numbering.next_shot_number(shots_dir)
+            shot_number = numbering.next_shot_number(shots_dir, project_id)
         except numbering.ShotSequenceError as e:
             fail(str(e))
             return
     else:
         shot_number = args.shot
 
-    existing = numbering.existing_shot_path(shots_dir, shot_number)
+    existing = numbering.existing_shot_path(shots_dir, project_id, shot_number)
+    canonical_name = numbering.shot_filename(project_id, shot_number)
     if existing and not args.replace:
         fail(
-            f"shot_{shot_number:03d} уже существует ({existing.name}). "
+            f"{canonical_name.rsplit('.', 1)[0]} уже существует ({existing.name}). "
             "Используйте --replace, чтобы перезаписать явно."
         )
 
@@ -164,7 +175,7 @@ def handle_shot(args, project, src_path: Path):
     if existing and existing.suffix.lower() != ".jpg":
         existing.unlink()  # старое расширение больше не актуально после --replace в jpg
 
-    dst_path = shots_dir / numbering.shot_filename(shot_number, "jpg")
+    dst_path = shots_dir / numbering.shot_filename(project_id, shot_number, "jpg")
     imageops.convert_shot_to_jpeg(src_path, dst_path)
 
     relative_path = str(dst_path.relative_to(REPO_ROOT))
@@ -186,13 +197,15 @@ def handle_reference(args, project, src_path: Path):
         fail(str(e))
         return
 
+    stem = reference_stem(project.id, args.reference, name)
+
     dest_dir = project.references_dir / args.reference
     dest_dir.mkdir(parents=True, exist_ok=True)
-    dst_no_ext = dest_dir / name
+    dst_no_ext = dest_dir / stem
 
-    existing = next((p for p in dest_dir.glob(f"{name}.*")), None)
+    existing = next((p for p in dest_dir.glob(f"{stem}.*")), None)
     if existing and not args.replace:
-        fail(f"Reference '{name}' уже существует ({existing.name}). Используйте --replace.")
+        fail(f"Reference '{stem}' уже существует ({existing.name}). Используйте --replace.")
     if existing and args.replace:
         existing.unlink()
 

@@ -1,4 +1,16 @@
-"""Конфиг проекта: projects/<id>/project.json"""
+"""
+Конфиг проекта: projects/<id>/project.json
+
+Naming standard (video_002 и все последующие проекты; video_001 — legacy, вне projects/):
+    shot:      {project_id}_shot_{number:03d}.{ext}
+    reference: {project_id}_ref_{category}_{name}.{ext}
+
+Заметка на будущее про Remotion (render.yml сейчас НЕ трогается этим модулем):
+render.yml сегодня жёстко ждёт файлы вида shot_XXX.ext в public/shots/ (video_001-стиль,
+без префикса project_id). Когда render.yml научится работать по project_id, шаг подготовки
+ассетов для Remotion должен будет СНИМАТЬ префикс "{project_id}_" при копировании
+в public/shots/, а не менять сам canonical naming в projects/<id>/shots/.
+"""
 
 import json
 from dataclasses import dataclass

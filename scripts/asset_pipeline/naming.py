@@ -26,3 +26,12 @@ def safe_stem_from_filename(filename: str) -> str:
     """Для watch-режима: превращает имя входящего файла в кандидата на --name (без валидации)."""
     stem = filename.rsplit(".", 1)[0]
     return re.sub(r"[^a-zA-Z0-9_]", "_", stem)
+
+
+def reference_stem(project_id: str, category: str, name: str) -> str:
+    """
+    Canonical basename для reference (без расширения):
+        {project_id}_ref_{category}_{name}
+    Например: video_002_ref_character_main_character
+    """
+    return f"{project_id}_ref_{category}_{name}"
