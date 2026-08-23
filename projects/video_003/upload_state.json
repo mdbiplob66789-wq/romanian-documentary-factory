@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "source_file": "/Users/ars/eat for fun/generated_images/shot_082.jpg",
+    "destination": "projects/video_003/shots/video_003_shot_001.jpg",
+    "type": "shot",
+    "shot_number": 1,
+    "sha256": "d4948cd57b67cfad793c74e232556d4984b64ee08145e8471e8178b70ce6e568",
+    "timestamp": "2026-08-23T22:16:56+00:00",
+    "commit_hash": "1c3dd54",
+    "push_status": "success"
+  }
+]
