@@ -138,21 +138,35 @@ jobs:
       - name: Validate project
         run: python scripts/check_project.py --project "$PROJECT_ID"
 
-      - name: Install FFmpeg, faster-whisper, Pillow (local-first stack, no Node)
+      - name: Install FFmpeg, Whisper, Pillow
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg
           python -m pip install --upgrade pip
-          python -m pip install -r requirements.txt
+          python -m pip install -r requirements.txt openai-whisper
 
       - name: Validate shots
         run: python scripts/validate_shots.py --project "$PROJECT_ID"
 
-      - name: Align voiceover (faster-whisper, local-first, no Remotion/Node)
-        run: python scripts/align_shots.py --project "$PROJECT_ID"
+      - name: Align voiceover
+        run: python scripts/align_project.py --project "$PROJECT_ID"
 
-      - name: Render visual master (ffmpeg)
-        run: python scripts/render_video.py --project "$PROJECT_ID"
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 20
+
+      - name: Install Remotion dependencies
+        run: npm install
+
+      - name: Stage assets for Remotion
+        run: python scripts/stage_remotion.py --project "$PROJECT_ID"
+
+      - name: Remotion render visual master
+        run: |
+          mkdir -p "projects/${PROJECT_ID}/work"
+          npx remotion render src/index.jsx DocumentaryFull "projects/${PROJECT_ID}/work/${PROJECT_ID}_visual_master.mp4" \
+            --props=render_props.json --codec=h264 --crf=20 --audio-bitrate=256k
 
       - name: Validate visual master
         run: python scripts/qc_visual.py --project "$PROJECT_ID"
@@ -165,6 +179,10 @@ jobs:
 
       - name: Final QC
         run: python scripts/qc_final.py --project "$PROJECT_ID"
+
+      - name: Clean Remotion staging
+        if: always()
+        run: python scripts/stage_remotion.py --clean
 
       - name: Upload final MP4 to GitHub
         uses: actions/upload-artifact@v4
