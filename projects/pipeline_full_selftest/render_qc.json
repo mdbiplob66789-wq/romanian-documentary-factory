@@ -13,5 +13,91 @@
   "resolution": "1920x1080",
   "fps": 30.0,
   "video_codec": "h264",
+  "motion": {
+    "status": "PASS",
+    "problems": [],
+    "shots": [
+      {
+        "shot": 1,
+        "duration": 3.38,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 2,
+        "duration": 3.02,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 3,
+        "duration": 3.06,
+        "motion": "zoom_out",
+        "intensity": "medium",
+        "start_scale": 1.07,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 4,
+        "duration": 3.54,
+        "motion": "pan_left",
+        "intensity": "low",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          1.2,
+          -0.1
+        ],
+        "translate_end": [
+          -1.2,
+          0.1
+        ]
+      },
+      {
+        "shot": 5,
+        "duration": 3.167,
+        "motion": "pan_right",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          -1.7,
+          0.1
+        ],
+        "translate_end": [
+          1.7,
+          -0.1
+        ]
+      }
+    ]
+  },
   "status": "PASS"
 }
