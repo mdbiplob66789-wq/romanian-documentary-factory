@@ -112,7 +112,15 @@ def resolve_sequential_anchors(items: list[dict], words: list[dict], min_confide
 
         t = words[idx]["start"]
         if results and t <= results[-1]["time"]:
-            raise RuntimeError(f"[{label}] Timeline перескакивает назад на '{text[:60]}' ({t} <= {results[-1]['time']})")
+            # Два соседних anchor'а совпали/почти совпали по секунде — реальный случай
+            # на живой речи (соседние фразы диктора впритык). Как и в проверенном
+            # align_final.py: небольшая (<2s) неточность аккуратно доталкивается вперёд,
+            # а не роняет весь alignment — падаем только на ДЕЙСТВИТЕЛЬНО большом скачке
+            # назад, который значит настоящую ошибку сопоставления, а не тай-брейк.
+            gap = results[-1]["time"] - t
+            if gap > 2.0:
+                raise RuntimeError(f"[{label}] Timeline перескакивает назад на '{text[:60]}' ({t} <= {results[-1]['time']})")
+            t = results[-1]["time"] + 0.04
 
         results.append({**item, "time": t, "confidence": round(conf, 4), "word_index": idx})
         cursor = max(cursor + 1, idx)

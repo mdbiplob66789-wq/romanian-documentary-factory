@@ -1,0 +1,970 @@
+{
+  "project_id": "video_001_v2",
+  "audio_duration": 549.877551,
+  "word_count": 1237,
+  "shot_count": 160,
+  "min_shot_confidence": 0.5882,
+  "shot_anchors": [
+    {
+      "shot": 1,
+      "anchor": "În septembrie 1991",
+      "time": 0.0,
+      "confidence": 1.0
+    },
+    {
+      "shot": 2,
+      "anchor": "un bărbat din",
+      "time": 3.86,
+      "confidence": 1.0
+    },
+    {
+      "shot": 3,
+      "anchor": "Era negustor de vite. Îşi",
+      "time": 9.1,
+      "confidence": 1.0
+    },
+    {
+      "shot": 4,
+      "anchor": "Îşi cumpărase bilet",
+      "time": 11.08,
+      "confidence": 0.9744
+    },
+    {
+      "shot": 5,
+      "anchor": "Nu s-a mai",
+      "time": 14.56,
+      "confidence": 1.0
+    },
+    {
+      "shot": 6,
+      "anchor": "S-a întors în",
+      "time": 16.34,
+      "confidence": 1.0
+    },
+    {
+      "shot": 7,
+      "anchor": "Treizeci de ani mai",
+      "time": 20.56,
+      "confidence": 0.6897
+    },
+    {
+      "shot": 8,
+      "anchor": "Purta aceleaşi haine.",
+      "time": 22.28,
+      "confidence": 1.0
+    },
+    {
+      "shot": 9,
+      "anchor": "Buhoci este o",
+      "time": 27.06,
+      "confidence": 1.0
+    },
+    {
+      "shot": 10,
+      "anchor": "Un loc obişnuit",
+      "time": 30.58,
+      "confidence": 1.0
+    },
+    {
+      "shot": 11,
+      "anchor": "Case cu porţi",
+      "time": 33.72,
+      "confidence": 1.0
+    },
+    {
+      "shot": 12,
+      "anchor": "oameni care se",
+      "time": 37.0,
+      "confidence": 1.0
+    },
+    {
+      "shot": 13,
+      "anchor": "Acolo trăia Vasile",
+      "time": 40.56,
+      "confidence": 1.0
+    },
+    {
+      "shot": 14,
+      "anchor": "Era negustor de vite. O",
+      "time": 42.7,
+      "confidence": 1.0
+    },
+    {
+      "shot": 15,
+      "anchor": "care cere drumuri.",
+      "time": 45.6,
+      "confidence": 1.0
+    },
+    {
+      "shot": 16,
+      "anchor": "Pleca des de",
+      "time": 47.4,
+      "confidence": 0.96
+    },
+    {
+      "shot": 17,
+      "anchor": "Cumpăra, vindea, se",
+      "time": 52.92,
+      "confidence": 1.0
+    },
+    {
+      "shot": 18,
+      "anchor": "se întorcea. Aşa",
+      "time": 53.98,
+      "confidence": 1.0
+    },
+    {
+      "shot": 19,
+      "anchor": "Aşa fusese ani",
+      "time": 54.8,
+      "confidence": 1.0
+    },
+    {
+      "shot": 20,
+      "anchor": "Nimeni nu se",
+      "time": 57.06,
+      "confidence": 1.0
+    },
+    {
+      "shot": 21,
+      "anchor": "pentru că Vasile",
+      "time": 60.38,
+      "confidence": 1.0
+    },
+    {
+      "shot": 22,
+      "anchor": "În 1991 avea",
+      "time": 63.88,
+      "confidence": 0.7097
+    },
+    {
+      "shot": 23,
+      "anchor": "Şi în 1991",
+      "time": 68.96,
+      "confidence": 0.9
+    },
+    {
+      "shot": 24,
+      "anchor": "Comunismul căzuse cu",
+      "time": 73.96,
+      "confidence": 1.0
+    },
+    {
+      "shot": 25,
+      "anchor": "Ţara era în",
+      "time": 77.7,
+      "confidence": 1.0
+    },
+    {
+      "shot": 26,
+      "anchor": "pe care nimeni",
+      "time": 80.74,
+      "confidence": 1.0
+    },
+    {
+      "shot": 27,
+      "anchor": "un om care pleacă",
+      "time": 85.64,
+      "confidence": 1.0
+    },
+    {
+      "shot": 28,
+      "anchor": "Ce ştim sigur",
+      "time": 90.84,
+      "confidence": 1.0
+    },
+    {
+      "shot": 29,
+      "anchor": "Dar ce ştim",
+      "time": 94.72,
+      "confidence": 1.0
+    },
+    {
+      "shot": 30,
+      "anchor": "Vasile Gorgoş a plecat",
+      "time": 97.74,
+      "confidence": 1.0
+    },
+    {
+      "shot": 31,
+      "anchor": "pentru o scurtă",
+      "time": 99.9,
+      "confidence": 1.0
+    },
+    {
+      "shot": 32,
+      "anchor": "Şi-a cumpărat un",
+      "time": 102.44,
+      "confidence": 1.0
+    },
+    {
+      "shot": 33,
+      "anchor": "L-a plătit dinainte.",
+      "time": 105.08,
+      "confidence": 0.973
+    },
+    {
+      "shot": 34,
+      "anchor": "Opriţi-vă o clipă",
+      "time": 106.74,
+      "confidence": 0.9444
+    },
+    {
+      "shot": 35,
+      "anchor": "Un om care",
+      "time": 109.96,
+      "confidence": 1.0
+    },
+    {
+      "shot": 36,
+      "anchor": "este un om",
+      "time": 112.24,
+      "confidence": 1.0
+    },
+    {
+      "shot": 37,
+      "anchor": "Nu e gestul cuiva care fuge.",
+      "time": 116.14,
+      "confidence": 1.0
+    },
+    {
+      "shot": 38,
+      "anchor": "Nu e gestul cuiva care îşi",
+      "time": 118.18,
+      "confidence": 0.9804
+    },
+    {
+      "shot": 39,
+      "anchor": "Este gestul unui",
+      "time": 121.38,
+      "confidence": 1.0
+    },
+    {
+      "shot": 40,
+      "anchor": "Doar că acea",
+      "time": 127.62,
+      "confidence": 1.0
+    },
+    {
+      "shot": 41,
+      "anchor": "Au trecut zilele",
+      "time": 130.34,
+      "confidence": 1.0
+    },
+    {
+      "shot": 42,
+      "anchor": "Apoi săptămânile. Familia",
+      "time": 133.48,
+      "confidence": 0.9796
+    },
+    {
+      "shot": 43,
+      "anchor": "Familia a mers",
+      "time": 134.78,
+      "confidence": 1.0
+    },
+    {
+      "shot": 44,
+      "anchor": "şi l-a declarat",
+      "time": 136.88,
+      "confidence": 1.0
+    },
+    {
+      "shot": 45,
+      "anchor": "A urmat o",
+      "time": 139.1,
+      "confidence": 1.0
+    },
+    {
+      "shot": 46,
+      "anchor": "S-a căutat. Şi",
+      "time": 140.86,
+      "confidence": 1.0
+    },
+    {
+      "shot": 47,
+      "anchor": "Şi nu s-a",
+      "time": 142.12,
+      "confidence": 1.0
+    },
+    {
+      "shot": 48,
+      "anchor": "Niciun martor care",
+      "time": 143.98,
+      "confidence": 0.973
+    },
+    {
+      "shot": 49,
+      "anchor": "Nicio urmă pe",
+      "time": 148.3,
+      "confidence": 0.963
+    },
+    {
+      "shot": 50,
+      "anchor": "Niciun bagaj abandonat.",
+      "time": 150.08,
+      "confidence": 0.9778
+    },
+    {
+      "shot": 51,
+      "anchor": "niciun corp. Niciodată.",
+      "time": 154.16,
+      "confidence": 0.9767
+    },
+    {
+      "shot": 52,
+      "anchor": "Aici începe partea",
+      "time": 156.86,
+      "confidence": 1.0
+    },
+    {
+      "shot": 53,
+      "anchor": "Pentru că nu",
+      "time": 161.38,
+      "confidence": 1.0
+    },
+    {
+      "shot": 54,
+      "anchor": "O familie care",
+      "time": 164.72,
+      "confidence": 1.0
+    },
+    {
+      "shot": 55,
+      "anchor": "nu are unde",
+      "time": 167.16,
+      "confidence": 1.0
+    },
+    {
+      "shot": 56,
+      "anchor": "Anii au trecut.",
+      "time": 169.62,
+      "confidence": 1.0
+    },
+    {
+      "shot": 57,
+      "anchor": "Speranţa s-a subţiat",
+      "time": 171.1,
+      "confidence": 1.0
+    },
+    {
+      "shot": 58,
+      "anchor": "La un moment",
+      "time": 175.36,
+      "confidence": 1.0
+    },
+    {
+      "shot": 59,
+      "anchor": "Vasile murise undeva",
+      "time": 180.26,
+      "confidence": 1.0
+    },
+    {
+      "shot": 60,
+      "anchor": "şi nu avea",
+      "time": 182.16,
+      "confidence": 1.0
+    },
+    {
+      "shot": 61,
+      "anchor": "Şi au făcut",
+      "time": 184.36,
+      "confidence": 1.0
+    },
+    {
+      "shot": 62,
+      "anchor": "I-au făcut slujbe",
+      "time": 188.74,
+      "confidence": 0.9412
+    },
+    {
+      "shot": 63,
+      "anchor": "Parastase. An după",
+      "time": 191.86,
+      "confidence": 1.0
+    },
+    {
+      "shot": 64,
+      "anchor": "An după an.",
+      "time": 193.02,
+      "confidence": 1.0
+    },
+    {
+      "shot": 65,
+      "anchor": "Pentru un om",
+      "time": 194.5,
+      "confidence": 1.0
+    },
+    {
+      "shot": 66,
+      "anchor": "Copiii lui au",
+      "time": 196.86,
+      "confidence": 1.0
+    },
+    {
+      "shot": 67,
+      "anchor": "Au îmbătrânit şi",
+      "time": 199.12,
+      "confidence": 0.9697
+    },
+    {
+      "shot": 68,
+      "anchor": "Satul a uitat.",
+      "time": 200.84,
+      "confidence": 1.0
+    },
+    {
+      "shot": 69,
+      "anchor": "România s-a schimbat",
+      "time": 202.32,
+      "confidence": 1.0
+    },
+    {
+      "shot": 70,
+      "anchor": "Au apărut telefoanele",
+      "time": 204.82,
+      "confidence": 0.9756
+    },
+    {
+      "shot": 71,
+      "anchor": "apoi internetul, apoi",
+      "time": 206.98,
+      "confidence": 1.0
+    },
+    {
+      "shot": 72,
+      "anchor": "pe care Vasile",
+      "time": 209.06,
+      "confidence": 1.0
+    },
+    {
+      "shot": 73,
+      "anchor": "Treizeci de ani.",
+      "time": 211.8,
+      "confidence": 0.5882
+    },
+    {
+      "shot": 74,
+      "anchor": "nu mai este",
+      "time": 217.44,
+      "confidence": 1.0
+    },
+    {
+      "shot": 75,
+      "anchor": "Devine o poveste",
+      "time": 219.74,
+      "confidence": 1.0
+    },
+    {
+      "shot": 76,
+      "anchor": "Şi apoi, într-o",
+      "time": 224.5,
+      "confidence": 1.0
+    },
+    {
+      "shot": 77,
+      "anchor": "în faţa porţii casei",
+      "time": 230.3,
+      "confidence": 1.0
+    },
+    {
+      "shot": 78,
+      "anchor": "a oprit o",
+      "time": 232.46,
+      "confidence": 0.9474
+    },
+    {
+      "shot": 79,
+      "anchor": "Din ea a",
+      "time": 234.0,
+      "confidence": 1.0
+    },
+    {
+      "shot": 80,
+      "anchor": "Avea nouăzeci şi",
+      "time": 236.38,
+      "confidence": 0.6154
+    },
+    {
+      "shot": 81,
+      "anchor": "Era confuz. Dezorientat.",
+      "time": 239.1,
+      "confidence": 1.0
+    },
+    {
+      "shot": 82,
+      "anchor": "Dezorientat. Nu părea",
+      "time": 240.5,
+      "confidence": 1.0
+    },
+    {
+      "shot": 83,
+      "anchor": "Nu părea să",
+      "time": 241.28,
+      "confidence": 1.0
+    },
+    {
+      "shot": 84,
+      "anchor": "Era Vasile Gorgoş.",
+      "time": 244.84,
+      "confidence": 0.9714
+    },
+    {
+      "shot": 85,
+      "anchor": "Familia care îi",
+      "time": 246.72,
+      "confidence": 1.0
+    },
+    {
+      "shot": 86,
+      "anchor": "l-a văzut stând",
+      "time": 249.94,
+      "confidence": 1.0
+    },
+    {
+      "shot": 87,
+      "anchor": "Şi acum detaliul",
+      "time": 252.16,
+      "confidence": 1.0
+    },
+    {
+      "shot": 88,
+      "anchor": "să ajungă în",
+      "time": 258.42,
+      "confidence": 1.0
+    },
+    {
+      "shot": 89,
+      "anchor": "inclusiv în Daily",
+      "time": 260.92,
+      "confidence": 1.0
+    },
+    {
+      "shot": 90,
+      "anchor": "Purta aceleaşi haine cu",
+      "time": 263.18,
+      "confidence": 1.0
+    },
+    {
+      "shot": 91,
+      "anchor": "cu care plecase",
+      "time": 264.54,
+      "confidence": 0.9677
+    },
+    {
+      "shot": 92,
+      "anchor": "În buzunar avea",
+      "time": 268.96,
+      "confidence": 1.0
+    },
+    {
+      "shot": 93,
+      "anchor": "Şi biletul de",
+      "time": 271.72,
+      "confidence": 1.0
+    },
+    {
+      "shot": 94,
+      "anchor": "Biletul din ziua",
+      "time": 273.84,
+      "confidence": 1.0
+    },
+    {
+      "shot": 95,
+      "anchor": "Rudele l-au dus",
+      "time": 276.82,
+      "confidence": 1.0
+    },
+    {
+      "shot": 96,
+      "anchor": "Medicii l-au examinat.",
+      "time": 279.44,
+      "confidence": 1.0
+    },
+    {
+      "shot": 97,
+      "anchor": "Concluzia: pentru un",
+      "time": 281.36,
+      "confidence": 1.0
+    },
+    {
+      "shot": 98,
+      "anchor": "existau unele probleme",
+      "time": 289.1,
+      "confidence": 1.0
+    },
+    {
+      "shot": 99,
+      "anchor": "Nu era un",
+      "time": 296.34,
+      "confidence": 1.0
+    },
+    {
+      "shot": 100,
+      "anchor": "L-au întrebat, evident",
+      "time": 300.16,
+      "confidence": 0.9756
+    },
+    {
+      "shot": 101,
+      "anchor": "Vasile a răspuns",
+      "time": 303.04,
+      "confidence": 1.0
+    },
+    {
+      "shot": 102,
+      "anchor": "A spus: tot",
+      "time": 307.92,
+      "confidence": 1.0
+    },
+    {
+      "shot": 103,
+      "anchor": "Hai să punem",
+      "time": 310.3,
+      "confidence": 1.0
+    },
+    {
+      "shot": 104,
+      "anchor": "Fără teorii. Doar",
+      "time": 314.56,
+      "confidence": 1.0
+    },
+    {
+      "shot": 105,
+      "anchor": "Unu. Hainele. Un",
+      "time": 317.64,
+      "confidence": 0.8462
+    },
+    {
+      "shot": 106,
+      "anchor": "Un om nu",
+      "time": 319.6,
+      "confidence": 1.0
+    },
+    {
+      "shot": 107,
+      "anchor": "Ori i-au fost",
+      "time": 322.78,
+      "confidence": 1.0
+    },
+    {
+      "shot": 108,
+      "anchor": "ori i-au fost",
+      "time": 322.82,
+      "confidence": 1.0
+    },
+    {
+      "shot": 109,
+      "anchor": "ori familia a",
+      "time": 327.36,
+      "confidence": 1.0
+    },
+    {
+      "shot": 110,
+      "anchor": "cine? Doi. Biletul",
+      "time": 335.2,
+      "confidence": 0.8667
+    },
+    {
+      "shot": 111,
+      "anchor": "Doi. Biletul de",
+      "time": 336.08,
+      "confidence": 0.8462
+    },
+    {
+      "shot": 112,
+      "anchor": "Un bilet de hârtie",
+      "time": 338.6,
+      "confidence": 1.0
+    },
+    {
+      "shot": 113,
+      "anchor": "Hârtia aceea a",
+      "time": 347.18,
+      "confidence": 1.0
+    },
+    {
+      "shot": 114,
+      "anchor": "Trei. Starea lui.",
+      "time": 351.56,
+      "confidence": 0.8148
+    },
+    {
+      "shot": 115,
+      "anchor": "Un bărbat de",
+      "time": 353.52,
+      "confidence": 1.0
+    },
+    {
+      "shot": 116,
+      "anchor": "Cineva l-a hrănit.",
+      "time": 359.36,
+      "confidence": 1.0
+    },
+    {
+      "shot": 117,
+      "anchor": "Cineva l-a îmbrăcat.",
+      "time": 361.22,
+      "confidence": 0.9189
+    },
+    {
+      "shot": 118,
+      "anchor": "Cineva a avut grijă de el ani",
+      "time": 362.86,
+      "confidence": 1.0
+    },
+    {
+      "shot": 119,
+      "anchor": "Patru. Maşina. Cineva",
+      "time": 366.26,
+      "confidence": 0.8235
+    },
+    {
+      "shot": 120,
+      "anchor": "Cineva l-a adus",
+      "time": 368.8,
+      "confidence": 1.0
+    },
+    {
+      "shot": 121,
+      "anchor": "Cineva ştia adresa",
+      "time": 370.74,
+      "confidence": 0.9444
+    },
+    {
+      "shot": 122,
+      "anchor": "Numărul acelei maşini",
+      "time": 377.5,
+      "confidence": 1.0
+    },
+    {
+      "shot": 123,
+      "anchor": "Cinci. Ce spune",
+      "time": 381.76,
+      "confidence": 0.75
+    },
+    {
+      "shot": 124,
+      "anchor": "Nu că nu",
+      "time": 384.16,
+      "confidence": 1.0
+    },
+    {
+      "shot": 125,
+      "anchor": "El spune că",
+      "time": 385.88,
+      "confidence": 1.0
+    },
+    {
+      "shot": 126,
+      "anchor": "nu a apărut",
+      "time": 392.64,
+      "confidence": 1.0
+    },
+    {
+      "shot": 127,
+      "anchor": "Nicio instituţie nu",
+      "time": 399.94,
+      "confidence": 1.0
+    },
+    {
+      "shot": 128,
+      "anchor": "Există explicaţii. Le",
+      "time": 404.78,
+      "confidence": 1.0
+    },
+    {
+      "shot": 129,
+      "anchor": "Le punem pe",
+      "time": 406.82,
+      "confidence": 1.0
+    },
+    {
+      "shot": 130,
+      "anchor": "Prima. Explicaţia medicală.",
+      "time": 412.9,
+      "confidence": 1.0
+    },
+    {
+      "shot": 131,
+      "anchor": "Există tulburări de",
+      "time": 415.82,
+      "confidence": 1.0
+    },
+    {
+      "shot": 132,
+      "anchor": "trăieşte ani întregi",
+      "time": 421.06,
+      "confidence": 1.0
+    },
+    {
+      "shot": 133,
+      "anchor": "sub un alt",
+      "time": 423.7,
+      "confidence": 1.0
+    },
+    {
+      "shot": 134,
+      "anchor": "Se întâmplă rar",
+      "time": 426.78,
+      "confidence": 1.0
+    },
+    {
+      "shot": 135,
+      "anchor": "Ar explica cei",
+      "time": 429.0,
+      "confidence": 1.0
+    },
+    {
+      "shot": 136,
+      "anchor": "Nu explică biletul",
+      "time": 430.98,
+      "confidence": 1.0
+    },
+    {
+      "shot": 137,
+      "anchor": "A doua. Cineva",
+      "time": 433.3,
+      "confidence": 0.96
+    },
+    {
+      "shot": 138,
+      "anchor": "O familie, un",
+      "time": 436.72,
+      "confidence": 1.0
+    },
+    {
+      "shot": 139,
+      "anchor": "Un om găsit",
+      "time": 439.92,
+      "confidence": 1.0
+    },
+    {
+      "shot": 140,
+      "anchor": "poate rămâne undeva",
+      "time": 444.08,
+      "confidence": 1.0
+    },
+    {
+      "shot": 141,
+      "anchor": "Ar explica starea",
+      "time": 446.68,
+      "confidence": 1.0
+    },
+    {
+      "shot": 142,
+      "anchor": "Nu explică de",
+      "time": 449.9,
+      "confidence": 1.0
+    },
+    {
+      "shot": 143,
+      "anchor": "A treia. Memoria",
+      "time": 453.82,
+      "confidence": 0.9655
+    },
+    {
+      "shot": 144,
+      "anchor": "Treizeci de ani schimbă",
+      "time": 457.26,
+      "confidence": 0.7568
+    },
+    {
+      "shot": 145,
+      "anchor": "iar povestea să",
+      "time": 462.58,
+      "confidence": 1.0
+    },
+    {
+      "shot": 146,
+      "anchor": "Este cea mai",
+      "time": 465.54,
+      "confidence": 1.0
+    },
+    {
+      "shot": 147,
+      "anchor": "Şi nu poate",
+      "time": 467.68,
+      "confidence": 1.0
+    },
+    {
+      "shot": 148,
+      "anchor": "pe internet, cazul",
+      "time": 471.4,
+      "confidence": 1.0
+    },
+    {
+      "shot": 149,
+      "anchor": "nu există nici",
+      "time": 487.38,
+      "confidence": 1.0
+    },
+    {
+      "shot": 150,
+      "anchor": "Vasile Gorgoş s-a",
+      "time": 496.9,
+      "confidence": 0.9714
+    },
+    {
+      "shot": 151,
+      "anchor": "Asta e partea",
+      "time": 499.84,
+      "confidence": 1.0
+    },
+    {
+      "shot": 152,
+      "anchor": "Un om pe",
+      "time": 503.82,
+      "confidence": 1.0
+    },
+    {
+      "shot": 153,
+      "anchor": "rămâne un gol",
+      "time": 517.62,
+      "confidence": 1.0
+    },
+    {
+      "shot": 154,
+      "anchor": "Un bilet de tren.",
+      "time": 522.38,
+      "confidence": 1.0
+    },
+    {
+      "shot": 155,
+      "anchor": "Aceleaşi haine. O",
+      "time": 523.6,
+      "confidence": 1.0
+    },
+    {
+      "shot": 156,
+      "anchor": "O maşină fără",
+      "time": 524.8,
+      "confidence": 1.0
+    },
+    {
+      "shot": 157,
+      "anchor": "repetat liniştit de",
+      "time": 527.9,
+      "confidence": 1.0
+    },
+    {
+      "shot": 158,
+      "anchor": "am fost acasă.",
+      "time": 532.56,
+      "confidence": 1.0
+    },
+    {
+      "shot": 159,
+      "anchor": "Voi ce credeţi",
+      "time": 534.42,
+      "confidence": 1.0
+    },
+    {
+      "shot": 160,
+      "anchor": "Scrieţi în comentarii.",
+      "time": 545.96,
+      "confidence": 1.0
+    }
+  ],
+  "music_block_count": 3
+}

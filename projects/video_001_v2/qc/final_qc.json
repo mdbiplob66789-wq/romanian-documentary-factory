@@ -1,0 +1,13 @@
+{
+  "project_id": "video_001_v2",
+  "path": "/Users/ars/romanian-documentary-factory/projects/video_001_v2/output/video_001_v2_FINAL_YOUTUBE.mp4",
+  "file_size_bytes": 355014444,
+  "video_stream_present": true,
+  "audio_stream_present": true,
+  "duration": 549.877563,
+  "resolution": "1920x1080",
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "decode_clean": true,
+  "status": "PASS"
+}

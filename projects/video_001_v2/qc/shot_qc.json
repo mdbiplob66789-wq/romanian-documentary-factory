@@ -1,0 +1,2583 @@
+{
+  "project_id": "video_001_v2",
+  "shot_count": 160,
+  "first_shot": 1,
+  "last_shot": 160,
+  "missing_shots": [],
+  "duplicate_shots": {},
+  "alignment_min_confidence": 0.5882,
+  "voiceover_duration": 549.877551,
+  "video_duration": 549.877551,
+  "duration_diff_sec": 0.0,
+  "duration_tolerance_sec": 0.5,
+  "resolution": "1920x1080",
+  "fps": 30.0,
+  "video_codec": "h264",
+  "motion": {
+    "status": "PASS",
+    "problems": [],
+    "shots": [
+      {
+        "shot": 1,
+        "duration": 3.86,
+        "motion": "zoom_out",
+        "intensity": "medium",
+        "start_scale": 1.07,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 2,
+        "duration": 5.24,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 3,
+        "duration": 1.98,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 4,
+        "duration": 3.48,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 5,
+        "duration": 1.78,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 6,
+        "duration": 4.22,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 7,
+        "duration": 1.72,
+        "motion": "zoom_out",
+        "intensity": "medium",
+        "start_scale": 1.07,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 8,
+        "duration": 4.78,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 9,
+        "duration": 3.52,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 10,
+        "duration": 3.14,
+        "motion": "zoom_out",
+        "intensity": "low",
+        "start_scale": 1.04,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 11,
+        "duration": 3.28,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 12,
+        "duration": 3.56,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 13,
+        "duration": 2.14,
+        "motion": "zoom_out",
+        "intensity": "low",
+        "start_scale": 1.04,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 14,
+        "duration": 2.9,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 15,
+        "duration": 1.8,
+        "motion": "zoom_out",
+        "intensity": "medium",
+        "start_scale": 1.07,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 16,
+        "duration": 5.52,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 17,
+        "duration": 1.06,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 18,
+        "duration": 0.82,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 19,
+        "duration": 2.26,
+        "motion": "zoom_out",
+        "intensity": "low",
+        "start_scale": 1.04,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 20,
+        "duration": 3.32,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 21,
+        "duration": 3.5,
+        "motion": "zoom_out",
+        "intensity": "medium",
+        "start_scale": 1.07,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 22,
+        "duration": 5.08,
+        "motion": "zoom_out",
+        "intensity": "low",
+        "start_scale": 1.04,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 23,
+        "duration": 5.0,
+        "motion": "pan_right",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          -1.7,
+          0.1
+        ],
+        "translate_end": [
+          1.7,
+          -0.1
+        ]
+      },
+      {
+        "shot": 24,
+        "duration": 3.74,
+        "motion": "pan_left",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          1.7,
+          -0.1
+        ],
+        "translate_end": [
+          -1.7,
+          0.1
+        ]
+      },
+      {
+        "shot": 25,
+        "duration": 3.04,
+        "motion": "pan_right",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          -1.7,
+          0.1
+        ],
+        "translate_end": [
+          1.7,
+          -0.1
+        ]
+      },
+      {
+        "shot": 26,
+        "duration": 4.9,
+        "motion": "pan_left",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          1.7,
+          -0.1
+        ],
+        "translate_end": [
+          -1.7,
+          0.1
+        ]
+      },
+      {
+        "shot": 27,
+        "duration": 5.2,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 28,
+        "duration": 3.88,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 29,
+        "duration": 3.02,
+        "motion": "zoom_out",
+        "intensity": "medium",
+        "start_scale": 1.07,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 30,
+        "duration": 2.16,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 31,
+        "duration": 2.54,
+        "motion": "zoom_out",
+        "intensity": "low",
+        "start_scale": 1.04,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 32,
+        "duration": 2.64,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 33,
+        "duration": 1.66,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 34,
+        "duration": 3.22,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 35,
+        "duration": 2.28,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 36,
+        "duration": 3.9,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 37,
+        "duration": 2.04,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 38,
+        "duration": 3.2,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 39,
+        "duration": 6.24,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 40,
+        "duration": 2.72,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 41,
+        "duration": 3.14,
+        "motion": "zoom_out",
+        "intensity": "medium",
+        "start_scale": 1.07,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 42,
+        "duration": 1.3,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 43,
+        "duration": 2.1,
+        "motion": "zoom_out",
+        "intensity": "medium",
+        "start_scale": 1.07,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 44,
+        "duration": 2.22,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 45,
+        "duration": 1.76,
+        "motion": "zoom_out",
+        "intensity": "medium",
+        "start_scale": 1.07,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 46,
+        "duration": 1.26,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 47,
+        "duration": 1.86,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 48,
+        "duration": 4.32,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 49,
+        "duration": 1.78,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 50,
+        "duration": 4.08,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 51,
+        "duration": 2.7,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 52,
+        "duration": 4.52,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 53,
+        "duration": 3.34,
+        "motion": "zoom_out",
+        "intensity": "medium",
+        "start_scale": 1.07,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 54,
+        "duration": 2.44,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 55,
+        "duration": 2.46,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 56,
+        "duration": 1.48,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 57,
+        "duration": 4.26,
+        "motion": "zoom_out",
+        "intensity": "medium",
+        "start_scale": 1.07,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 58,
+        "duration": 4.9,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 59,
+        "duration": 1.9,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 60,
+        "duration": 2.2,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 61,
+        "duration": 4.38,
+        "motion": "pan_right",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          -1.7,
+          0.1
+        ],
+        "translate_end": [
+          1.7,
+          -0.1
+        ]
+      },
+      {
+        "shot": 62,
+        "duration": 3.12,
+        "motion": "pan_left",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          1.7,
+          -0.1
+        ],
+        "translate_end": [
+          -1.7,
+          0.1
+        ]
+      },
+      {
+        "shot": 63,
+        "duration": 1.16,
+        "motion": "pan_right",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          -1.7,
+          0.1
+        ],
+        "translate_end": [
+          1.7,
+          -0.1
+        ]
+      },
+      {
+        "shot": 64,
+        "duration": 1.48,
+        "motion": "pan_left",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          1.7,
+          -0.1
+        ],
+        "translate_end": [
+          -1.7,
+          0.1
+        ]
+      },
+      {
+        "shot": 65,
+        "duration": 2.36,
+        "motion": "pan_right",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          -1.7,
+          0.1
+        ],
+        "translate_end": [
+          1.7,
+          -0.1
+        ]
+      },
+      {
+        "shot": 66,
+        "duration": 2.26,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 67,
+        "duration": 1.72,
+        "motion": "zoom_out",
+        "intensity": "medium",
+        "start_scale": 1.07,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 68,
+        "duration": 1.48,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 69,
+        "duration": 2.5,
+        "motion": "pan_right",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          -1.7,
+          0.1
+        ],
+        "translate_end": [
+          1.7,
+          -0.1
+        ]
+      },
+      {
+        "shot": 70,
+        "duration": 2.16,
+        "motion": "pan_left",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          1.7,
+          -0.1
+        ],
+        "translate_end": [
+          -1.7,
+          0.1
+        ]
+      },
+      {
+        "shot": 71,
+        "duration": 2.08,
+        "motion": "pan_right",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          -1.7,
+          0.1
+        ],
+        "translate_end": [
+          1.7,
+          -0.1
+        ]
+      },
+      {
+        "shot": 72,
+        "duration": 2.74,
+        "motion": "pan_left",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          1.7,
+          -0.1
+        ],
+        "translate_end": [
+          -1.7,
+          0.1
+        ]
+      },
+      {
+        "shot": 73,
+        "duration": 5.64,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 74,
+        "duration": 2.3,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 75,
+        "duration": 4.76,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 76,
+        "duration": 5.8,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 77,
+        "duration": 2.16,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 78,
+        "duration": 1.54,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 79,
+        "duration": 2.38,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 80,
+        "duration": 2.72,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 81,
+        "duration": 1.4,
+        "motion": "zoom_out",
+        "intensity": "medium",
+        "start_scale": 1.07,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 82,
+        "duration": 0.78,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 83,
+        "duration": 3.56,
+        "motion": "zoom_out",
+        "intensity": "medium",
+        "start_scale": 1.07,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 84,
+        "duration": 1.88,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 85,
+        "duration": 3.22,
+        "motion": "zoom_out",
+        "intensity": "medium",
+        "start_scale": 1.07,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 86,
+        "duration": 2.22,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 87,
+        "duration": 6.26,
+        "motion": "zoom_out",
+        "intensity": "medium",
+        "start_scale": 1.07,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 88,
+        "duration": 2.5,
+        "motion": "zoom_out",
+        "intensity": "low",
+        "start_scale": 1.04,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 89,
+        "duration": 2.26,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 90,
+        "duration": 1.36,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 91,
+        "duration": 4.42,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 92,
+        "duration": 2.76,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 93,
+        "duration": 2.12,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 94,
+        "duration": 2.98,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 95,
+        "duration": 2.62,
+        "motion": "zoom_out",
+        "intensity": "medium",
+        "start_scale": 1.07,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 96,
+        "duration": 1.92,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 97,
+        "duration": 7.74,
+        "motion": "zoom_out",
+        "intensity": "low",
+        "start_scale": 1.04,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 98,
+        "duration": 7.24,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 99,
+        "duration": 3.82,
+        "motion": "zoom_out",
+        "intensity": "medium",
+        "start_scale": 1.07,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 100,
+        "duration": 2.88,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 101,
+        "duration": 4.88,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 102,
+        "duration": 2.38,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 103,
+        "duration": 4.26,
+        "motion": "pan_right",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          -1.7,
+          0.1
+        ],
+        "translate_end": [
+          1.7,
+          -0.1
+        ]
+      },
+      {
+        "shot": 104,
+        "duration": 3.08,
+        "motion": "pan_left",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          1.7,
+          -0.1
+        ],
+        "translate_end": [
+          -1.7,
+          0.1
+        ]
+      },
+      {
+        "shot": 105,
+        "duration": 1.96,
+        "motion": "pan_right",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          -1.7,
+          0.1
+        ],
+        "translate_end": [
+          1.7,
+          -0.1
+        ]
+      },
+      {
+        "shot": 106,
+        "duration": 3.18,
+        "motion": "pan_left",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          1.7,
+          -0.1
+        ],
+        "translate_end": [
+          -1.7,
+          0.1
+        ]
+      },
+      {
+        "shot": 107,
+        "duration": 0.04,
+        "motion": "pan_right",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          -1.7,
+          0.1
+        ],
+        "translate_end": [
+          1.7,
+          -0.1
+        ]
+      },
+      {
+        "shot": 108,
+        "duration": 4.54,
+        "motion": "pan_left",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          1.7,
+          -0.1
+        ],
+        "translate_end": [
+          -1.7,
+          0.1
+        ]
+      },
+      {
+        "shot": 109,
+        "duration": 7.84,
+        "motion": "pan_right",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          -1.7,
+          0.1
+        ],
+        "translate_end": [
+          1.7,
+          -0.1
+        ]
+      },
+      {
+        "shot": 110,
+        "duration": 0.88,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 111,
+        "duration": 2.52,
+        "motion": "pan_right",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          -1.7,
+          0.1
+        ],
+        "translate_end": [
+          1.7,
+          -0.1
+        ]
+      },
+      {
+        "shot": 112,
+        "duration": 8.58,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 113,
+        "duration": 4.38,
+        "motion": "pan_right",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          -1.7,
+          0.1
+        ],
+        "translate_end": [
+          1.7,
+          -0.1
+        ]
+      },
+      {
+        "shot": 114,
+        "duration": 1.96,
+        "motion": "pan_left",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          1.7,
+          -0.1
+        ],
+        "translate_end": [
+          -1.7,
+          0.1
+        ]
+      },
+      {
+        "shot": 115,
+        "duration": 5.84,
+        "motion": "pan_right",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          -1.7,
+          0.1
+        ],
+        "translate_end": [
+          1.7,
+          -0.1
+        ]
+      },
+      {
+        "shot": 116,
+        "duration": 1.86,
+        "motion": "pan_left",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          1.7,
+          -0.1
+        ],
+        "translate_end": [
+          -1.7,
+          0.1
+        ]
+      },
+      {
+        "shot": 117,
+        "duration": 1.64,
+        "motion": "pan_right",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          -1.7,
+          0.1
+        ],
+        "translate_end": [
+          1.7,
+          -0.1
+        ]
+      },
+      {
+        "shot": 118,
+        "duration": 3.4,
+        "motion": "pan_left",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          1.7,
+          -0.1
+        ],
+        "translate_end": [
+          -1.7,
+          0.1
+        ]
+      },
+      {
+        "shot": 119,
+        "duration": 2.54,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 120,
+        "duration": 1.94,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 121,
+        "duration": 6.76,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 122,
+        "duration": 4.26,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 123,
+        "duration": 2.4,
+        "motion": "pan_right",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          -1.7,
+          0.1
+        ],
+        "translate_end": [
+          1.7,
+          -0.1
+        ]
+      },
+      {
+        "shot": 124,
+        "duration": 1.72,
+        "motion": "pan_left",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          1.7,
+          -0.1
+        ],
+        "translate_end": [
+          -1.7,
+          0.1
+        ]
+      },
+      {
+        "shot": 125,
+        "duration": 6.76,
+        "motion": "pan_right",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          -1.7,
+          0.1
+        ],
+        "translate_end": [
+          1.7,
+          -0.1
+        ]
+      },
+      {
+        "shot": 126,
+        "duration": 7.3,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 127,
+        "duration": 4.84,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 128,
+        "duration": 2.04,
+        "motion": "pan_left",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          1.7,
+          -0.1
+        ],
+        "translate_end": [
+          -1.7,
+          0.1
+        ]
+      },
+      {
+        "shot": 129,
+        "duration": 6.08,
+        "motion": "pan_right",
+        "intensity": "medium",
+        "start_scale": 1.04,
+        "end_scale": 1.04,
+        "translate_start": [
+          -1.7,
+          0.1
+        ],
+        "translate_end": [
+          1.7,
+          -0.1
+        ]
+      },
+      {
+        "shot": 130,
+        "duration": 2.92,
+        "motion": "zoom_out",
+        "intensity": "low",
+        "start_scale": 1.04,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 131,
+        "duration": 5.24,
+        "motion": "zoom_out",
+        "intensity": "medium",
+        "start_scale": 1.07,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 132,
+        "duration": 2.64,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 133,
+        "duration": 3.08,
+        "motion": "zoom_out",
+        "intensity": "medium",
+        "start_scale": 1.07,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 134,
+        "duration": 2.22,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 135,
+        "duration": 1.98,
+        "motion": "zoom_out",
+        "intensity": "medium",
+        "start_scale": 1.07,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 136,
+        "duration": 2.32,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 137,
+        "duration": 3.42,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 138,
+        "duration": 3.2,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 139,
+        "duration": 4.16,
+        "motion": "zoom_out",
+        "intensity": "medium",
+        "start_scale": 1.07,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 140,
+        "duration": 2.6,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 141,
+        "duration": 3.22,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 142,
+        "duration": 3.92,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 143,
+        "duration": 3.44,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 144,
+        "duration": 5.32,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 145,
+        "duration": 2.96,
+        "motion": "zoom_out",
+        "intensity": "medium",
+        "start_scale": 1.07,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 146,
+        "duration": 2.14,
+        "motion": "zoom_in",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.04,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 147,
+        "duration": 3.72,
+        "motion": "zoom_out",
+        "intensity": "medium",
+        "start_scale": 1.07,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 148,
+        "duration": 15.98,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 149,
+        "duration": 9.52,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 150,
+        "duration": 2.94,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 151,
+        "duration": 3.98,
+        "motion": "zoom_out",
+        "intensity": "low",
+        "start_scale": 1.04,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 152,
+        "duration": 13.8,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 153,
+        "duration": 4.76,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 154,
+        "duration": 1.22,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 155,
+        "duration": 1.2,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 156,
+        "duration": 3.1,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 157,
+        "duration": 4.66,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 158,
+        "duration": 1.86,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 159,
+        "duration": 11.54,
+        "motion": "static",
+        "intensity": "low",
+        "start_scale": 1.0,
+        "end_scale": 1.0,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "shot": 160,
+        "duration": 3.918,
+        "motion": "zoom_in",
+        "intensity": "medium",
+        "start_scale": 1.0,
+        "end_scale": 1.07,
+        "translate_start": [
+          0.0,
+          0.0
+        ],
+        "translate_end": [
+          0.0,
+          0.0
+        ]
+      }
+    ]
+  },
+  "status": "PASS"
+}

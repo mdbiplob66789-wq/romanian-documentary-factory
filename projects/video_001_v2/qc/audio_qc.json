@@ -1,0 +1,29 @@
+{
+  "project_id": "video_001_v2",
+  "voice_lufs": -14.0,
+  "music_target_db": -37.0,
+  "ducking_enabled": false,
+  "music_blocks": [
+    "block_01.mp3",
+    "block_02.mp3",
+    "block_03.mp3"
+  ],
+  "crossfade_sec": 60.0,
+  "peak": -0.84,
+  "true_peak": -0.84,
+  "integrated_lufs": -13.81,
+  "lra": 3.2,
+  "duration": 549.877563,
+  "audio_stream_present": true,
+  "video_stream_present": true,
+  "body_levels": [
+    {
+      "block": "block_03.mp3",
+      "window_start": 344.37,
+      "mean_db": -16.3
+    }
+  ],
+  "body_tolerance_db": 1.0,
+  "body_jump_detected": false,
+  "status": "PASS"
+}

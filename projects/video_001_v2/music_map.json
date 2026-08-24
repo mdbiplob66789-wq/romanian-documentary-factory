@@ -1,0 +1,29 @@
+{
+  "version": "music_map/v1",
+  "crossfade_sec": 60,
+  "intro_fade_sec": 6,
+  "outro_fade_sec": 10,
+  "blocks": [
+    {
+      "file": "block_01.mp3",
+      "start_text": "În septembrie 1991",
+      "mood": "dark_ambient",
+      "intensity": "low",
+      "action": "fade_in"
+    },
+    {
+      "file": "block_02.mp3",
+      "start_text": "Şi apoi, într-o",
+      "mood": "dark_ambient",
+      "intensity": "low",
+      "action": "change_track"
+    },
+    {
+      "file": "block_03.mp3",
+      "start_text": "Există explicaţii. Le",
+      "mood": "dark_ambient",
+      "intensity": "low",
+      "action": "fade_out"
+    }
+  ]
+}

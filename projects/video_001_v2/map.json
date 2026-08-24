@@ -1,0 +1,1124 @@
+{
+  "shots": [
+    {
+      "SHOT": 1,
+      "START_TEXT": "În septembrie 1991",
+      "END_TEXT": "În septembrie 1991",
+      "MOTION": "zoom_out",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 2,
+      "START_TEXT": "un bărbat din",
+      "END_TEXT": "acasă pentru câteva zile.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 3,
+      "START_TEXT": "Era negustor de vite. Îşi",
+      "END_TEXT": "zile. Era negustor de vite.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 4,
+      "START_TEXT": "Îşi cumpărase bilet",
+      "END_TEXT": "de tren, plătit dinainte.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 5,
+      "START_TEXT": "Nu s-a mai",
+      "END_TEXT": "Nu s-a mai întors.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 6,
+      "START_TEXT": "S-a întors în",
+      "END_TEXT": "întors în august 2021.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 7,
+      "START_TEXT": "Treizeci de ani mai",
+      "END_TEXT": "de ani mai târziu.",
+      "MOTION": "zoom_out",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 8,
+      "START_TEXT": "Purta aceleaşi haine.",
+      "END_TEXT": "spune niciodată unde fusese.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 9,
+      "START_TEXT": "Buhoci este o",
+      "END_TEXT": "comună din judeţul Bacău.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 10,
+      "START_TEXT": "Un loc obişnuit",
+      "END_TEXT": "obişnuit, în estul României.",
+      "MOTION": "zoom_out",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 11,
+      "START_TEXT": "Case cu porţi",
+      "END_TEXT": "lemn, uliţe de ţară",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 12,
+      "START_TEXT": "oameni care se",
+      "END_TEXT": "ei de o viaţă.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 13,
+      "START_TEXT": "Acolo trăia Vasile",
+      "END_TEXT": "Acolo trăia Vasile Gorgoş.",
+      "MOTION": "zoom_out",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 14,
+      "START_TEXT": "Era negustor de vite. O",
+      "END_TEXT": "vite. O meserie veche",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 15,
+      "START_TEXT": "care cere drumuri.",
+      "END_TEXT": "veche, care cere drumuri.",
+      "MOTION": "zoom_out",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 16,
+      "START_TEXT": "Pleca des de",
+      "END_TEXT": "alteori pentru mai mult.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 17,
+      "START_TEXT": "Cumpăra, vindea, se",
+      "END_TEXT": "mai mult. Cumpăra, vindea",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 18,
+      "START_TEXT": "se întorcea. Aşa",
+      "END_TEXT": "Cumpăra, vindea, se întorcea.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 19,
+      "START_TEXT": "Aşa fusese ani",
+      "END_TEXT": "fusese ani la rând.",
+      "MOTION": "zoom_out",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 20,
+      "START_TEXT": "Nimeni nu se",
+      "END_TEXT": "îngrijora când Vasile pleca",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 21,
+      "START_TEXT": "pentru că Vasile",
+      "END_TEXT": "Vasile se întorcea întotdeauna.",
+      "MOTION": "zoom_out",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 22,
+      "START_TEXT": "În 1991 avea",
+      "END_TEXT": "şaizeci şi trei de ani.",
+      "MOTION": "zoom_out",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 23,
+      "START_TEXT": "Şi în 1991",
+      "END_TEXT": "1991, România se schimba.",
+      "MOTION": "pan_right",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 24,
+      "START_TEXT": "Comunismul căzuse cu",
+      "END_TEXT": "an şi jumătate înainte.",
+      "MOTION": "pan_left",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 25,
+      "START_TEXT": "Ţara era în",
+      "END_TEXT": "în mijlocul unei transformări",
+      "MOTION": "pan_right",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 26,
+      "START_TEXT": "pe care nimeni",
+      "END_TEXT": "Într-o astfel de ţară",
+      "MOTION": "pan_left",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 27,
+      "START_TEXT": "un om care pleacă",
+      "END_TEXT": "ceva ieşit din comun.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 28,
+      "START_TEXT": "Ce ştim sigur",
+      "END_TEXT": "acea zi este puţin.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 29,
+      "START_TEXT": "Dar ce ştim",
+      "END_TEXT": "ce ştim este important.",
+      "MOTION": "zoom_out",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 30,
+      "START_TEXT": "Vasile Gorgoş a plecat",
+      "END_TEXT": "Gorgoş a plecat de acasă",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 31,
+      "START_TEXT": "pentru o scurtă",
+      "END_TEXT": "scurtă călătorie de afaceri.",
+      "MOTION": "zoom_out",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 32,
+      "START_TEXT": "Şi-a cumpărat un",
+      "END_TEXT": "bilet de tren dus-întors.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 33,
+      "START_TEXT": "L-a plătit dinainte.",
+      "END_TEXT": "dus-întors. L-a plătit dinainte.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 34,
+      "START_TEXT": "Opriţi-vă o clipă",
+      "END_TEXT": "clipă la detaliul ăsta.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 35,
+      "START_TEXT": "Un om care",
+      "END_TEXT": "cumpără bilet de întoarcere",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 36,
+      "START_TEXT": "este un om",
+      "END_TEXT": "gând să se întoarcă.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 37,
+      "START_TEXT": "Nu e gestul cuiva care fuge.",
+      "END_TEXT": "gestul cuiva care fuge.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 38,
+      "START_TEXT": "Nu e gestul cuiva care îşi",
+      "END_TEXT": "care îşi părăseşte familia.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 39,
+      "START_TEXT": "Este gestul unui",
+      "END_TEXT": "fi din nou acasă.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 40,
+      "START_TEXT": "Doar că acea",
+      "END_TEXT": "zi nu a venit.",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 41,
+      "START_TEXT": "Au trecut zilele",
+      "END_TEXT": "fi trebuit să apară.",
+      "MOTION": "zoom_out",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 42,
+      "START_TEXT": "Apoi săptămânile. Familia",
+      "END_TEXT": "să apară. Apoi săptămânile.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 43,
+      "START_TEXT": "Familia a mers",
+      "END_TEXT": "a mers la poliţie",
+      "MOTION": "zoom_out",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 44,
+      "START_TEXT": "şi l-a declarat",
+      "END_TEXT": "şi l-a declarat dispărut.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 45,
+      "START_TEXT": "A urmat o",
+      "END_TEXT": "A urmat o anchetă.",
+      "MOTION": "zoom_out",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 46,
+      "START_TEXT": "S-a căutat. Şi",
+      "END_TEXT": "o anchetă. S-a căutat.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 47,
+      "START_TEXT": "Şi nu s-a",
+      "END_TEXT": "nu s-a găsit nimic.",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 48,
+      "START_TEXT": "Niciun martor care",
+      "END_TEXT": "l-a văzut coborând undeva.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 49,
+      "START_TEXT": "Nicio urmă pe",
+      "END_TEXT": "Nicio urmă pe traseu.",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 50,
+      "START_TEXT": "Niciun bagaj abandonat.",
+      "END_TEXT": "Şi, cel mai important",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 51,
+      "START_TEXT": "niciun corp. Niciodată.",
+      "END_TEXT": "important, niciun corp. Niciodată.",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 52,
+      "START_TEXT": "Aici începe partea",
+      "END_TEXT": "vorbeşte cel mai puţin.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 53,
+      "START_TEXT": "Pentru că nu",
+      "END_TEXT": "spectaculoasă. E doar grea.",
+      "MOTION": "zoom_out",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 54,
+      "START_TEXT": "O familie care",
+      "END_TEXT": "nu are un mormânt",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 55,
+      "START_TEXT": "nu are unde",
+      "END_TEXT": "se ducă să plângă.",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 56,
+      "START_TEXT": "Anii au trecut.",
+      "END_TEXT": "plângă. Anii au trecut.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 57,
+      "START_TEXT": "Speranţa s-a subţiat",
+      "END_TEXT": "cum se subţiază întotdeauna.",
+      "MOTION": "zoom_out",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 58,
+      "START_TEXT": "La un moment",
+      "END_TEXT": "ceea ce părea evident",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 59,
+      "START_TEXT": "Vasile murise undeva",
+      "END_TEXT": "murise undeva, pe drum",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 60,
+      "START_TEXT": "şi nu avea",
+      "END_TEXT": "avea să fie găsit.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 61,
+      "START_TEXT": "Şi au făcut",
+      "END_TEXT": "în astfel de situaţii.",
+      "MOTION": "pan_right",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 62,
+      "START_TEXT": "I-au făcut slujbe",
+      "END_TEXT": "făcut slujbe de pomenire.",
+      "MOTION": "pan_left",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 63,
+      "START_TEXT": "Parastase. An după",
+      "END_TEXT": "slujbe de pomenire. Parastase.",
+      "MOTION": "pan_right",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 64,
+      "START_TEXT": "An după an.",
+      "END_TEXT": "Parastase. An după an.",
+      "MOTION": "pan_left",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 65,
+      "START_TEXT": "Pentru un om",
+      "END_TEXT": "care nu îl îngropaseră.",
+      "MOTION": "pan_right",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 66,
+      "START_TEXT": "Copiii lui au",
+      "END_TEXT": "Copiii lui au crescut.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 67,
+      "START_TEXT": "Au îmbătrânit şi",
+      "END_TEXT": "Au îmbătrânit şi ei.",
+      "MOTION": "zoom_out",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 68,
+      "START_TEXT": "Satul a uitat.",
+      "END_TEXT": "ei. Satul a uitat.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 69,
+      "START_TEXT": "România s-a schimbat",
+      "END_TEXT": "schimbat de câteva ori.",
+      "MOTION": "pan_right",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 70,
+      "START_TEXT": "Au apărut telefoanele",
+      "END_TEXT": "Au apărut telefoanele mobile",
+      "MOTION": "pan_left",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 71,
+      "START_TEXT": "apoi internetul, apoi",
+      "END_TEXT": "apoi internetul, apoi lucruri",
+      "MOTION": "pan_right",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 72,
+      "START_TEXT": "pe care Vasile",
+      "END_TEXT": "nu le văzuse niciodată.",
+      "MOTION": "pan_left",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 73,
+      "START_TEXT": "Treizeci de ani.",
+      "END_TEXT": "atât de mult timp",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 74,
+      "START_TEXT": "nu mai este",
+      "END_TEXT": "este o persoană căutată.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 75,
+      "START_TEXT": "Devine o poveste",
+      "END_TEXT": "seara, şi apoi taci.",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 76,
+      "START_TEXT": "Şi apoi, într-o",
+      "END_TEXT": "sfârşitul lui august 2021",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 77,
+      "START_TEXT": "în faţa porţii casei",
+      "END_TEXT": "porţii casei din Buhoci",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 78,
+      "START_TEXT": "a oprit o",
+      "END_TEXT": "a oprit o maşină.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 79,
+      "START_TEXT": "Din ea a",
+      "END_TEXT": "a coborât un bătrân.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 80,
+      "START_TEXT": "Avea nouăzeci şi",
+      "END_TEXT": "nouăzeci şi trei de ani.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 81,
+      "START_TEXT": "Era confuz. Dezorientat.",
+      "END_TEXT": "de ani. Era confuz.",
+      "MOTION": "zoom_out",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 82,
+      "START_TEXT": "Dezorientat. Nu părea",
+      "END_TEXT": "ani. Era confuz. Dezorientat.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 83,
+      "START_TEXT": "Nu părea să",
+      "END_TEXT": "bine unde se află.",
+      "MOTION": "zoom_out",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 84,
+      "START_TEXT": "Era Vasile Gorgoş.",
+      "END_TEXT": "află. Era Vasile Gorgoş.",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 85,
+      "START_TEXT": "Familia care îi",
+      "END_TEXT": "pomeni treizeci de ani",
+      "MOTION": "zoom_out",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 86,
+      "START_TEXT": "l-a văzut stând",
+      "END_TEXT": "stând în faţa porţii.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 87,
+      "START_TEXT": "Şi acum detaliul",
+      "END_TEXT": "din judeţul Bacău şi",
+      "MOTION": "zoom_out",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 88,
+      "START_TEXT": "să ajungă în",
+      "END_TEXT": "ajungă în presa internaţională",
+      "MOTION": "zoom_out",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 89,
+      "START_TEXT": "inclusiv în Daily",
+      "END_TEXT": "inclusiv în Daily Mail.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 90,
+      "START_TEXT": "Purta aceleaşi haine cu",
+      "END_TEXT": "Mail. Purta aceleaşi haine",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 91,
+      "START_TEXT": "cu care plecase",
+      "END_TEXT": "care plecase în 1991.",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 92,
+      "START_TEXT": "În buzunar avea",
+      "END_TEXT": "avea actul de identitate.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 93,
+      "START_TEXT": "Şi biletul de",
+      "END_TEXT": "Şi biletul de tren.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 94,
+      "START_TEXT": "Biletul din ziua",
+      "END_TEXT": "ziua în care dispăruse.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 95,
+      "START_TEXT": "Rudele l-au dus",
+      "END_TEXT": "dus imediat la spital.",
+      "MOTION": "zoom_out",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 96,
+      "START_TEXT": "Medicii l-au examinat.",
+      "END_TEXT": "spital. Medicii l-au examinat.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 97,
+      "START_TEXT": "Concluzia: pentru un",
+      "END_TEXT": "sănătate bună. Potrivit relatărilor",
+      "MOTION": "zoom_out",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 98,
+      "START_TEXT": "existau unele probleme",
+      "END_TEXT": "comun pentru vârsta lui.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 99,
+      "START_TEXT": "Nu era un",
+      "END_TEXT": "de ani pe stradă.",
+      "MOTION": "zoom_out",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 100,
+      "START_TEXT": "L-au întrebat, evident",
+      "END_TEXT": "întrebat, evident, unde fusese.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 101,
+      "START_TEXT": "Vasile a răspuns",
+      "END_TEXT": "întrebat unde, mai exact.",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 102,
+      "START_TEXT": "A spus: tot",
+      "END_TEXT": "spus: tot la Buhoci.",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 103,
+      "START_TEXT": "Hai să punem",
+      "END_TEXT": "potrivesc unul lângă altul.",
+      "MOTION": "pan_right",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 104,
+      "START_TEXT": "Fără teorii. Doar",
+      "END_TEXT": "Fără teorii. Doar faptele.",
+      "MOTION": "pan_left",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 105,
+      "START_TEXT": "Unu. Hainele. Un",
+      "END_TEXT": "Doar faptele. Unu. Hainele.",
+      "MOTION": "pan_right",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 106,
+      "START_TEXT": "Un om nu",
+      "END_TEXT": "haine treizeci de ani.",
+      "MOTION": "pan_left",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 107,
+      "START_TEXT": "Ori i-au fost",
+      "END_TEXT": "Ori i-au fost păstrate",
+      "MOTION": "pan_right",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 108,
+      "START_TEXT": "ori i-au fost",
+      "END_TEXT": "date înapoi la plecare",
+      "MOTION": "pan_left",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 109,
+      "START_TEXT": "ori familia a",
+      "END_TEXT": "ridică imediat următoarea întrebare",
+      "MOTION": "pan_right",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 110,
+      "START_TEXT": "cine? Doi. Biletul",
+      "END_TEXT": "imediat următoarea întrebare: cine?",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 111,
+      "START_TEXT": "Doi. Biletul de",
+      "END_TEXT": "Doi. Biletul de tren.",
+      "MOTION": "pan_right",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 112,
+      "START_TEXT": "Un bilet de hârtie",
+      "END_TEXT": "unui om în 2021.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 113,
+      "START_TEXT": "Hârtia aceea a",
+      "END_TEXT": "cu grijă, trei decenii.",
+      "MOTION": "pan_right",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 114,
+      "START_TEXT": "Trei. Starea lui.",
+      "END_TEXT": "decenii. Trei. Starea lui.",
+      "MOTION": "pan_left",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 115,
+      "START_TEXT": "Un bărbat de",
+      "END_TEXT": "sănătos pentru vârsta lui.",
+      "MOTION": "pan_right",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 116,
+      "START_TEXT": "Cineva l-a hrănit.",
+      "END_TEXT": "lui. Cineva l-a hrănit.",
+      "MOTION": "pan_left",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 117,
+      "START_TEXT": "Cineva l-a îmbrăcat.",
+      "END_TEXT": "hrănit. Cineva l-a îmbrăcat.",
+      "MOTION": "pan_right",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 118,
+      "START_TEXT": "Cineva a avut grijă de el ani",
+      "END_TEXT": "el ani la rând.",
+      "MOTION": "pan_left",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 119,
+      "START_TEXT": "Patru. Maşina. Cineva",
+      "END_TEXT": "la rând. Patru. Maşina.",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 120,
+      "START_TEXT": "Cineva l-a adus",
+      "END_TEXT": "până în faţa porţii.",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 121,
+      "START_TEXT": "Cineva ştia adresa",
+      "END_TEXT": "după treizeci de ani.",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 122,
+      "START_TEXT": "Numărul acelei maşini",
+      "END_TEXT": "a fost identificat niciodată.",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 123,
+      "START_TEXT": "Cinci. Ce spune",
+      "END_TEXT": "Cinci. Ce spune el.",
+      "MOTION": "pan_right",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 124,
+      "START_TEXT": "Nu că nu",
+      "END_TEXT": "că nu îşi aminteşte.",
+      "MOTION": "pan_left",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 125,
+      "START_TEXT": "El spune că",
+      "END_TEXT": "peste toate astea: public",
+      "MOTION": "pan_right",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 126,
+      "START_TEXT": "nu a apărut",
+      "END_TEXT": "aceşti treizeci de ani.",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 127,
+      "START_TEXT": "Nicio instituţie nu",
+      "END_TEXT": "a fost la noi.",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 128,
+      "START_TEXT": "Există explicaţii. Le",
+      "END_TEXT": "la noi. Există explicaţii.",
+      "MOTION": "pan_left",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 129,
+      "START_TEXT": "Le punem pe",
+      "END_TEXT": "ales pe cele plictisitoare.",
+      "MOTION": "pan_right",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 130,
+      "START_TEXT": "Prima. Explicaţia medicală.",
+      "END_TEXT": "plictisitoare. Prima. Explicaţia medicală.",
+      "MOTION": "zoom_out",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 131,
+      "START_TEXT": "Există tulburări de",
+      "END_TEXT": "îşi pierde identitatea şi",
+      "MOTION": "zoom_out",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 132,
+      "START_TEXT": "trăieşte ani întregi",
+      "END_TEXT": "trăieşte ani întregi altundeva",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 133,
+      "START_TEXT": "sub un alt",
+      "END_TEXT": "să ştie cine este.",
+      "MOTION": "zoom_out",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 134,
+      "START_TEXT": "Se întâmplă rar",
+      "END_TEXT": "rar, dar se întâmplă.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 135,
+      "START_TEXT": "Ar explica cei",
+      "END_TEXT": "cei treizeci de ani.",
+      "MOTION": "zoom_out",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 136,
+      "START_TEXT": "Nu explică biletul",
+      "END_TEXT": "explică biletul din buzunar.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 137,
+      "START_TEXT": "A doua. Cineva",
+      "END_TEXT": "avut grijă de el.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 138,
+      "START_TEXT": "O familie, un",
+      "END_TEXT": "un aşezământ, o mănăstire.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 139,
+      "START_TEXT": "Un om găsit",
+      "END_TEXT": "nu ştie cine este",
+      "MOTION": "zoom_out",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 140,
+      "START_TEXT": "poate rămâne undeva",
+      "END_TEXT": "undeva foarte mult timp.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 141,
+      "START_TEXT": "Ar explica starea",
+      "END_TEXT": "lui bună de sănătate.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 142,
+      "START_TEXT": "Nu explică de",
+      "END_TEXT": "a spus niciodată nimic.",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 143,
+      "START_TEXT": "A treia. Memoria",
+      "END_TEXT": "A treia. Memoria familiei.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 144,
+      "START_TEXT": "Treizeci de ani schimbă",
+      "END_TEXT": "fi fost doar asemănătoare",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 145,
+      "START_TEXT": "iar povestea să",
+      "END_TEXT": "fi crescut pe drum.",
+      "MOTION": "zoom_out",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 146,
+      "START_TEXT": "Este cea mai",
+      "END_TEXT": "cea mai simplă explicaţie.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 147,
+      "START_TEXT": "Şi nu poate",
+      "END_TEXT": "verificată. Şi a patra",
+      "MOTION": "zoom_out",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 148,
+      "START_TEXT": "pe internet, cazul",
+      "END_TEXT": "niciuna dintre aceste variante",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 149,
+      "START_TEXT": "nu există nici",
+      "END_TEXT": "că tăcerea îi sperie.",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 150,
+      "START_TEXT": "Vasile Gorgoş s-a",
+      "END_TEXT": "Gorgoş s-a întors acasă.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 151,
+      "START_TEXT": "Asta e partea",
+      "END_TEXT": "şi merită spusă întâi.",
+      "MOTION": "zoom_out",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 152,
+      "START_TEXT": "Un om pe",
+      "END_TEXT": "1991 şi august 2021",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    },
+    {
+      "SHOT": 153,
+      "START_TEXT": "rămâne un gol",
+      "END_TEXT": "nu ştim absolut nimic.",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 154,
+      "START_TEXT": "Un bilet de tren.",
+      "END_TEXT": "Un bilet de tren.",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 155,
+      "START_TEXT": "Aceleaşi haine. O",
+      "END_TEXT": "de tren. Aceleaşi haine.",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 156,
+      "START_TEXT": "O maşină fără",
+      "END_TEXT": "Şi un singur răspuns",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 157,
+      "START_TEXT": "repetat liniştit de",
+      "END_TEXT": "bătrân de nouăzeci şi trei de ani",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 158,
+      "START_TEXT": "am fost acasă.",
+      "END_TEXT": "ani: am fost acasă.",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 159,
+      "START_TEXT": "Voi ce credeţi",
+      "END_TEXT": "şi s-a întors altfel?",
+      "MOTION": "static",
+      "INTENSITY": "low"
+    },
+    {
+      "SHOT": 160,
+      "START_TEXT": "Scrieţi în comentarii.",
+      "END_TEXT": "comentarii. Le citesc pe toate.",
+      "MOTION": "zoom_in",
+      "INTENSITY": "medium"
+    }
+  ]
+}
