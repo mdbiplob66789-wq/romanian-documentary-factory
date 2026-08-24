@@ -1,39 +1,42 @@
 # Romanian Documentary Factory
 
-Автоматизированное производство документальных видео: ассеты → выравнивание по
-голосу → Remotion → музыка → QC → Google Drive.
+Local-first производство документальных видео: генерация кадров → выравнивание
+речи (faster-whisper) → монтаж и motion (ffmpeg) → музыка → QC → Google Drive.
+Единственный внешний сервис — NordRouter (генерация изображений). Всё
+остальное — офлайн, на вашем Mac.
 
-## video_002 и далее (production pipeline)
+## video_002 и далее (production pipeline, Python + ffmpeg + faster-whisper)
 
 ```bash
 # Новый проект
 python scripts/new_project.py video_004
 
-# Загрузка шота (автонумерация)
-python scripts/upload_asset.py image.png --project video_004 --next
+# Заполните projects/video_004/map.json, music_map.json, voiceover.mp3, music/
 
-# Reference
-python scripts/upload_asset.py ref.png \
-  --project video_004 \
-  --reference character \
-  --name main_character
+# Генерация кадров через NordRouter прямо в canonical destination
+python scripts/generate_project.py video_004 --commit
+python scripts/generate_project.py video_004 --resume   # если сорвалось на середине
 
 # Проверка готовности
 python scripts/check_project.py --project video_004
 
-# Рендер (запускает GitHub Actions, не рендерит локально)
-python scripts/render_project.py video_004
+# Полная локальная сборка одной командой (align -> render -> QC -> audio -> QC)
+python scripts/build_project.py video_004
+
+# Или полный цикл разом: генерация + сборка + загрузка на Drive
+python scripts/run_project.py video_004 --generate-images --render --upload
 
 # Статус
 python scripts/project_status.py video_004
 ```
 
-После `new_project.py` заполните в `projects/<id>/`:
-`map.json` (шоты: SHOT/START_TEXT/END_TEXT/MOTION/INTENSITY),
-`music_map.json` (блоки музыки: start_text/file/mood/...),
-`voiceover.mp3`, и файлы в `music/` (`block_01.mp3`, `block_02.mp3`, ...).
+Ручная загрузка одного кадра/референса (если не через generate_project.py):
+```bash
+python scripts/upload_asset.py image.png --project video_004 --next
+python scripts/upload_asset.py ref.png --project video_004 --reference character --name main_character
+```
 
-Watch-режим (авто-загрузка новых файлов из `~/UrmeReci/inbox/<project>/`):
+Watch-режим (опциональный fallback, авто-загрузка новых файлов из `~/UrmeReci/inbox/<project>/`):
 ```bash
 python scripts/watch_assets.py --project video_004
 ```
@@ -43,26 +46,51 @@ python scripts/watch_assets.py --project video_004
 projects/<id>/shots/<id>_shot_017.jpg
 projects/<id>/references/character/<id>_ref_character_main_character.png
 ```
-Нумерация и references всегда локальны внутри `project_id` — video_002 и video_003
-никогда не пересекаются.
+Нумерация и references всегда локальны внутри `project_id`.
+
+### Структура проекта
+```
+projects/<id>/
+  project.json, map.json, music_map.json, voiceover.mp3, upload_state.json
+  shots/ references/ music/     — ассеты (в git; music/*.mp3 — нет, см. storage strategy)
+  work/    — aligned_timeline.json, visual_master.mp4 (не в git), state_hashes.json
+  qc/      — shot_qc.json, audio_qc.json, final_qc.json (в git)
+  output/  — <id>_FINAL_YOUTUBE.mp4 (не в git — доставляется на Drive)
+  logs/    — generation/alignment/render/audio.log (не в git)
+```
+
+### Motion engine (ffmpeg, НЕ Remotion)
+`render_video.py` строит per-shot `zoompan` (протестировано на нестабильность —
+вариант через `crop` с одновременно меняющимися w+h в этой сборке ffmpeg давал
+дублирующиеся кадры, zoompan — нет). Амплитуда: low 4%, medium 7%, hard cap 8%,
+распределена на всю фактическую длительность шота. `static` — буквально без
+движения. Pan — тот же движок, только x/y без изменения zoom. HARD CUT между
+шотами по умолчанию (concat demuxer, `-c copy`), xfade — только если явно в map.json.
 
 ### Правила музыки (фиксированы, не переопределяются)
 - голос: -14 LUFS, музыка: -20 dB относительно голоса
 - ducking выключен, sidechain запрещён, резких подъёмов/провалов нет
-- переход между блоками — 60 сек equal-power crossfade
+- переход между блоками — 60 сек equal-power crossfade (по умолчанию)
 - intro fade-in 6 сек, outro fade-out 10 сек — единственные разрешённые изменения общего уровня
 
-### Итог: `out/<id>_FINAL_YOUTUBE.mp4` → `gdrive:URME_RECI/<id>/<id>_FINAL_YOUTUBE.mp4`
+### Storage strategy
+В git: код, project.json/map.json/music_map.json, shots/, references/, qc/*.json,
+work/*.json (hashes/state), upload_state.json. НЕ в git: music/*.mp3,
+work/*.mp4 (промежуточный рендер), output/*.mp4 (финал — уходит на Drive), logs/.
 
-## video_001 (legacy)
+### Итог: `projects/<id>/output/<id>_FINAL_YOUTUBE.mp4` → `gdrive:URME_RECI/<id>/<id>_FINAL_YOUTUBE.mp4`
 
-Отдельный, не изменяемый пайплайн: 160 кадров `shot_NNN.jpg/png` в корне репозитория,
+## video_001 (legacy, не менялся)
+
+Отдельный пайплайн на Remotion: 160 кадров `shot_NNN.jpg/png` в корне репозитория,
 `ElevenLabs_Kuki_combined.mp3`, карта шотов зашита в `scripts/align_final.py`, музыка —
-3 блока, загружаемые из Drive и собираемые `build_audio_video001.py`. Рендер запускается
-через тот же workflow **Render documentary** с пустым `project_id`.
+3 блока из Drive, `build_audio_video001.py`. Рендер — тот же workflow **Render
+documentary** с пустым `project_id`.
 
-## Workflow
+## GitHub Actions
 
 `.github/workflows/render.yml`, `workflow_dispatch` с полем `project_id`:
-- пусто → `render-legacy` (video_001, без изменений)
-- `video_002` и т.п. → `render-project` (полный generic пайплайн, п.23)
+- пусто → `render-legacy` (video_001, Remotion, без изменений)
+- `video_002` и т.п. → `render-project` (тот же local-first стек — ffmpeg +
+  faster-whisper, БЕЗ Node/Remotion). Основной путь — локальный запуск на
+  вашем Mac через `run_project.py`; CI — опциональный delivery/trigger layer.
