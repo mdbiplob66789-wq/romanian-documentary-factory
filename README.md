@@ -1,11 +1,11 @@
 # Romanian Documentary Factory
 
-Local-first производство документальных видео: генерация кадров → выравнивание
-речи (faster-whisper) → монтаж и motion (ffmpeg) → музыка → QC → Google Drive.
-Единственный внешний сервис — NordRouter (генерация изображений). Всё
-остальное — офлайн, на вашем Mac.
+Производство документальных видео: генерация кадров → выравнивание речи →
+монтаж/motion → музыка → QC → Google Drive. Внешний сервис — NordRouter
+(генерация изображений). Рендер/монтаж — GitHub Actions (Remotion), запускается
+через `workflow_dispatch`.
 
-## video_002 и далее (production pipeline, Python + ffmpeg + faster-whisper)
+## video_002 и далее (production pipeline)
 
 ```bash
 # Новый проект
@@ -13,27 +13,18 @@ python scripts/new_project.py video_004
 
 # Заполните projects/video_004/map.json, music_map.json, voiceover.mp3, music/
 
-# Генерация кадров через NordRouter прямо в canonical destination
-python scripts/generate_project.py video_004 --commit
-python scripts/generate_project.py video_004 --resume   # если сорвалось на середине
+# Загрузка кадра/референса
+python scripts/upload_asset.py image.png --project video_004 --next
+python scripts/upload_asset.py ref.png --project video_004 --reference character --name main_character
 
 # Проверка готовности
 python scripts/check_project.py --project video_004
 
-# Полная локальная сборка одной командой (align -> render -> QC -> audio -> QC)
-python scripts/build_project.py video_004
-
-# Или полный цикл разом: генерация + сборка + загрузка на Drive
-python scripts/run_project.py video_004 --generate-images --render --upload
+# Рендер — запускает GitHub Actions (render-project job), не рендерит локально
+python scripts/render_project.py video_004
 
 # Статус
 python scripts/project_status.py video_004
-```
-
-Ручная загрузка одного кадра/референса (если не через generate_project.py):
-```bash
-python scripts/upload_asset.py image.png --project video_004 --next
-python scripts/upload_asset.py ref.png --project video_004 --reference character --name main_character
 ```
 
 Watch-режим (опциональный fallback, авто-загрузка новых файлов из `~/UrmeReci/inbox/<project>/`):
@@ -59,13 +50,17 @@ projects/<id>/
   logs/    — generation/alignment/render/audio.log (не в git)
 ```
 
-### Motion engine (ffmpeg, НЕ Remotion)
-`render_video.py` строит per-shot `zoompan` (протестировано на нестабильность —
-вариант через `crop` с одновременно меняющимися w+h в этой сборке ffmpeg давал
-дублирующиеся кадры, zoompan — нет). Амплитуда: low 4%, medium 7%, hard cap 8%,
-распределена на всю фактическую длительность шота. `static` — буквально без
-движения. Pan — тот же движок, только x/y без изменения zoom. HARD CUT между
-шотами по умолчанию (concat demuxer, `-c copy`), xfade — только если явно в map.json.
+### Visual render: Remotion (через GitHub Actions)
+`render-project` job: align_project.py (openai-whisper) → stage_remotion.py
+(снимает project_id-префикс во временный `public/shots/`) → Remotion render →
+`projects/<id>/work/<id>_visual_master.mp4`. Motion (zoom/pan/static) — в
+`src/Root.jsx`, читает aligned_timeline через `getInputProps()`.
+
+В репозитории также лежит альтернативный local-first вариант на ffmpeg +
+faster-whisper (`align_shots.py`, `render_video.py`, `generate_project.py`,
+`build_project.py`, `run_project.py`) — рабочий и протестированный, но **не
+используется по умолчанию** (см. `render.yml`), т.к. было решено вернуться на
+Remotion. Ничего не удалено, доступно при необходимости.
 
 ### Правила музыки (фиксированы, не переопределяются)
 - голос: -14 LUFS, музыка: -23 dB относительно голоса (≈ -37 LUFS)
@@ -82,7 +77,7 @@ work/*.mp4 (промежуточный рендер), output/*.mp4 (финал �
 
 ## video_001 (legacy, не менялся)
 
-Отдельный пайплайн на Remotion: 160 кадров `shot_NNN.jpg/png` в корне репозитория,
+Отдельный пайплайн: 160 кадров `shot_NNN.jpg/png` в корне репозитория,
 `ElevenLabs_Kuki_combined.mp3`, карта шотов зашита в `scripts/align_final.py`, музыка —
 3 блока из Drive, `build_audio_video001.py`. Рендер — тот же workflow **Render
 documentary** с пустым `project_id`.
@@ -90,7 +85,6 @@ documentary** с пустым `project_id`.
 ## GitHub Actions
 
 `.github/workflows/render.yml`, `workflow_dispatch` с полем `project_id`:
-- пусто → `render-legacy` (video_001, Remotion, без изменений)
-- `video_002` и т.п. → `render-project` (тот же local-first стек — ffmpeg +
-  faster-whisper, БЕЗ Node/Remotion). Основной путь — локальный запуск на
-  вашем Mac через `run_project.py`; CI — опциональный delivery/trigger layer.
+- пусто → `render-legacy` (video_001, без изменений)
+- `video_002` и т.п. → `render-project` (тот же стек, что и legacy: Remotion +
+  openai-whisper), полностью через CI.
