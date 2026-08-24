@@ -138,34 +138,21 @@ jobs:
       - name: Validate project
         run: python scripts/check_project.py --project "$PROJECT_ID"
 
-      - name: Install FFmpeg, Whisper, Pillow
+      - name: Install FFmpeg, faster-whisper, Pillow (local-first stack, no Node)
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg
           python -m pip install --upgrade pip
-          python -m pip install -r requirements.txt openai-whisper
+          python -m pip install -r requirements.txt
 
       - name: Validate shots
         run: python scripts/validate_shots.py --project "$PROJECT_ID"
 
-      - name: Align voiceover
-        run: python scripts/align_project.py --project "$PROJECT_ID"
+      - name: Align voiceover (faster-whisper, local-first, no Remotion/Node)
+        run: python scripts/align_shots.py --project "$PROJECT_ID"
 
-      - name: Setup Node
-        uses: actions/setup-node@v5
-        with:
-          node-version: 20
-
-      - name: Install Remotion dependencies
-        run: npm install
-
-      - name: Stage assets for Remotion
-        run: python scripts/stage_remotion.py --project "$PROJECT_ID"
-
-      - name: Remotion render visual master
-        run: |
-          npx remotion render src/index.jsx DocumentaryFull "out/${PROJECT_ID}_visual_master.mp4" \
-            --props=render_props.json --codec=h264 --crf=20 --audio-bitrate=256k
+      - name: Render visual master (ffmpeg)
+        run: python scripts/render_video.py --project "$PROJECT_ID"
 
       - name: Validate visual master
         run: python scripts/qc_visual.py --project "$PROJECT_ID"
@@ -179,15 +166,11 @@ jobs:
       - name: Final QC
         run: python scripts/qc_final.py --project "$PROJECT_ID"
 
-      - name: Clean Remotion staging
-        if: always()
-        run: python scripts/stage_remotion.py --clean
-
       - name: Upload final MP4 to GitHub
         uses: actions/upload-artifact@v4
         with:
           name: ${{ github.event.inputs.project_id }}-final-video
-          path: out/${{ github.event.inputs.project_id }}_FINAL_YOUTUBE.mp4
+          path: projects/${{ github.event.inputs.project_id }}/output/${{ github.event.inputs.project_id }}_FINAL_YOUTUBE.mp4
           if-no-files-found: error
           retention-days: 14
 
@@ -196,9 +179,10 @@ jobs:
         with:
           name: ${{ github.event.inputs.project_id }}-qc-reports
           path: |
-            projects/${{ github.event.inputs.project_id }}/alignment_report.json
-            projects/${{ github.event.inputs.project_id }}/render_qc.json
-            projects/${{ github.event.inputs.project_id }}/audio_qc.json
+            projects/${{ github.event.inputs.project_id }}/work/alignment_report.json
+            projects/${{ github.event.inputs.project_id }}/qc/shot_qc.json
+            projects/${{ github.event.inputs.project_id }}/qc/audio_qc.json
+            projects/${{ github.event.inputs.project_id }}/qc/final_qc.json
           if-no-files-found: error
           retention-days: 14
 
@@ -226,7 +210,7 @@ jobs:
           set -euo pipefail
           DEST="gdrive:URME_RECI/${PROJECT_ID}/${PROJECT_ID}_FINAL_YOUTUBE.mp4"
           rclone copyto \
-            "out/${PROJECT_ID}_FINAL_YOUTUBE.mp4" \
+            "projects/${PROJECT_ID}/output/${PROJECT_ID}_FINAL_YOUTUBE.mp4" \
             "$DEST" \
             --drive-chunk-size 128M \
             --transfers 1 \
