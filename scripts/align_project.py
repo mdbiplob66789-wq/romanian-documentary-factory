@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
-DEPRECATED (оставлен нетронутым, не удалён — см. п.1 ТЗ "не удаляй рабочий код
-автоматически"): использовал openai-whisper + Remotion-архитектуру.
-Замена: scripts/align_shots.py (faster-whisper, local-first, output в work/).
+АКТИВНЫЙ скрипт alignment для render.yml (render-project job) — openai-whisper +
+Remotion-архитектура, восстановлена по явному запросу вместо local-first варианта.
+Альтернатива на faster-whisper (не используется render.yml, но есть в репозитории):
+scripts/align_shots.py.
 
 scripts/align_project.py --project video_002
 
