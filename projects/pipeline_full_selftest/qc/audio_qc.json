@@ -1,17 +1,17 @@
 {
   "project_id": "pipeline_full_selftest",
   "voice_lufs": -14.0,
-  "music_target_db": -34.0,
+  "music_target_db": -37.0,
   "ducking_enabled": false,
   "music_blocks": [
     "block_01.mp3",
     "block_02.mp3"
   ],
   "crossfade_sec": 2.0,
-  "peak": -0.49,
-  "true_peak": -0.49,
-  "integrated_lufs": -13.94,
-  "lra": 0.9,
+  "peak": -0.71,
+  "true_peak": -0.71,
+  "integrated_lufs": -13.96,
+  "lra": 1.0,
   "duration": 16.166667,
   "audio_stream_present": true,
   "video_stream_present": true,
@@ -19,7 +19,7 @@
     {
       "block": "block_01.mp3",
       "window_start": 1.12,
-      "mean_db": -16.6
+      "mean_db": -16.7
     },
     {
       "block": "block_02.mp3",

@@ -31,7 +31,7 @@ DEFAULT_PROJECT_CONFIG = {
 # Утверждённые правила музыки (п.12 ТЗ) — фиксированные, не читаются из music_map,
 # чтобы их нельзя было случайно переопределить неверным значением в конкретном проекте.
 VOICE_TARGET_LUFS = -14.0
-MUSIC_BELOW_VOICE_DB = -20.0
+MUSIC_BELOW_VOICE_DB = -23.0  # -> музыка ~-37 LUFS при голосе -14 LUFS (обновлено, было -20)
 DUCKING_ENABLED = False
 DEFAULT_CROSSFADE_SEC = 60.0
 INTRO_FADE_SEC = 6.0

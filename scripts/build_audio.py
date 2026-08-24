@@ -8,7 +8,7 @@ Generic audio-мастеринг (п.10-18 ТЗ). Читает music_map.json + 
 
 Правила (п.12, неизменны, не читаются из music_map, чтобы их нельзя было переопределить):
   voice_target_lufs   = -14
-  music_below_voice_db = -20  (т.е. музыка нормализуется к voice_target + music_below = -34 LUFS)
+  music_below_voice_db = -23  (т.е. музыка нормализуется к voice_target + music_below = -37 LUFS)
   ducking_enabled     = False
   Единственные разрешённые изменения уровня музыки целиком — intro fade-in (6s) и
   outro fade-out (10s). Никаких events/ducking/boost/hard cut.
@@ -89,7 +89,7 @@ def loop_to_length(src: Path, target_seconds: float, dst: Path):
 
 def loudnorm_to(src: Path, target_lufs: float, dst: Path):
     """Однопроходный loudnorm — музыка/голос всегда приводятся к фиксированному уровню
-    относительно друг друга (voice=-14, music=-34), а не к громкости исходного файла."""
+    относительно друг друга (voice=-14, music=-37), а не к громкости исходного файла."""
     run([
         "ffmpeg", "-y", "-i", str(src),
         "-af", f"loudnorm=I={target_lufs}:TP=-1.5:LRA=11",
@@ -104,7 +104,7 @@ def build_music_bed(project, timeline: dict, music_map: dict, work: Path) -> Pat
         fail("aligned_timeline.json не содержит music_blocks — запустите align_project.py с music_map.json.")
 
     crossfade_default = float(music_map.get("crossfade_sec", 60))
-    music_target_lufs = VOICE_TARGET_LUFS + MUSIC_BELOW_VOICE_DB  # -14 + (-20) = -34
+    music_target_lufs = VOICE_TARGET_LUFS + MUSIC_BELOW_VOICE_DB  # -14 + (-23) = -37
 
     segments = []
     for i, block in enumerate(blocks):
