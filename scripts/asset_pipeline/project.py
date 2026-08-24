@@ -5,11 +5,9 @@ Naming standard (video_002 и все последующие проекты; vide
     shot:      {project_id}_shot_{number:03d}.{ext}
     reference: {project_id}_ref_{category}_{name}.{ext}
 
-Заметка на будущее про Remotion (render.yml сейчас НЕ трогается этим модулем):
-render.yml сегодня жёстко ждёт файлы вида shot_XXX.ext в public/shots/ (video_001-стиль,
-без префикса project_id). Когда render.yml научится работать по project_id, шаг подготовки
-ассетов для Remotion должен будет СНИМАТЬ префикс "{project_id}_" при копировании
-в public/shots/, а не менять сам canonical naming в projects/<id>/shots/.
+Local-first pipeline (video_002+): Python + ffmpeg + faster-whisper. Никакого
+Remotion/Node — visual render делает ffmpeg через render_video.py. video_001
+(Remotion) остаётся legacy, не трогается.
 """
 
 import json
@@ -82,13 +80,40 @@ class Project:
     def voiceover_path(self) -> Path:
         return self.root / self.config.get("voiceover", DEFAULT_PROJECT_CONFIG["voiceover"])
 
+    # --- новые рабочие директории (local-first pipeline, п.4 ТЗ) ---
+    @property
+    def work_dir(self) -> Path:
+        return self.root / "work"
+
+    @property
+    def qc_dir(self) -> Path:
+        return self.root / "qc"
+
+    @property
+    def output_dir(self) -> Path:
+        return self.root / "output"
+
+    @property
+    def logs_dir(self) -> Path:
+        return self.root / "logs"
+
     @property
     def aligned_timeline_path(self) -> Path:
-        return self.root / "aligned_timeline.json"
+        return self.work_dir / "aligned_timeline.json"
 
     @property
     def alignment_report_path(self) -> Path:
-        return self.root / "alignment_report.json"
+        return self.work_dir / "alignment_report.json"
+
+    @property
+    def state_hashes_path(self) -> Path:
+        """Хэши voiceover/map/music_map/shots/music — для resume/idempotency (п.39 ТЗ)."""
+        return self.work_dir / "state_hashes.json"
+
+    @property
+    def generation_state_path(self) -> Path:
+        """Прогресс генерации картинок по shot — для --resume (п.6, п.40 ТЗ)."""
+        return self.work_dir / "generation_state.json"
 
     @property
     def language(self) -> str:
@@ -99,8 +124,20 @@ class Project:
         return self.config.get("output_name", f"{self.id}_FINAL_YOUTUBE.mp4")
 
     @property
+    def final_master_path(self) -> Path:
+        return self.output_dir / self.output_name
+
+    @property
     def visual_master_name(self) -> str:
         return f"{self.id}_visual_master.mp4"
+
+    @property
+    def visual_master_path(self) -> Path:
+        return self.work_dir / self.visual_master_name
+
+    def ensure_work_dirs(self) -> None:
+        for d in (self.work_dir, self.qc_dir, self.output_dir, self.logs_dir):
+            d.mkdir(parents=True, exist_ok=True)
 
 
 def load_project(project_id: str) -> Project:

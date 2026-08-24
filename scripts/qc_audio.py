@@ -19,9 +19,6 @@ from asset_pipeline.project import (
     DEFAULT_CROSSFADE_SEC, DUCKING_ENABLED, INTRO_FADE_SEC, MUSIC_BELOW_VOICE_DB,
     OUTRO_FADE_SEC, ProjectError, VOICE_TARGET_LUFS, load_project,
 )
-from asset_pipeline.repo import REPO_ROOT
-
-OUT_DIR = REPO_ROOT / "out"
 BODY_TOLERANCE_DB = 1.0
 
 
@@ -97,7 +94,7 @@ def main():
         fail(str(e))
         return
 
-    final_path = OUT_DIR / project.output_name
+    final_path = project.final_master_path
     if not final_path.exists():
         fail(f"Нет финального файла: {final_path}")
 
@@ -153,7 +150,8 @@ def main():
         "status": "FAIL" if (jump_detected or not has_audio or not has_video) else "PASS",
     }
 
-    out_path = project.root / "audio_qc.json"
+    project.qc_dir.mkdir(parents=True, exist_ok=True)
+    out_path = project.qc_dir / "audio_qc.json"
     out_path.write_text(json.dumps(qc, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(qc, ensure_ascii=False, indent=2))
 

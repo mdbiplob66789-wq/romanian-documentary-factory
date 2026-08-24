@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""scripts/qc_visual.py --project video_002 -> projects/<id>/render_qc.json (п.20 ТЗ)"""
+"""scripts/qc_visual.py --project video_002 -> projects/<id>/qc/shot_qc.json (п.20, п.32 ТЗ)"""
 
 import argparse
 import json
@@ -12,9 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from asset_pipeline import numbering
 from asset_pipeline.motion import UnknownMotionError, max_scale, motion_bounds
 from asset_pipeline.project import MOTION_AMPLITUDE_HARD_CAP, ProjectError, load_project
-from asset_pipeline.repo import REPO_ROOT
 
-OUT_DIR = REPO_ROOT / "out"
 DURATION_TOLERANCE_SEC = 0.5
 MOTION_DURATION_TOLERANCE_SEC = 0.05  # движение должно заканчиваться ровно с шотом (п.10 ТЗ)
 
@@ -122,7 +120,7 @@ def main():
         fail(str(e))
         return
 
-    visual_master = OUT_DIR / project.visual_master_name
+    visual_master = project.visual_master_path
     if not visual_master.exists():
         fail(f"Нет visual master: {visual_master}")
 
@@ -174,7 +172,8 @@ def main():
         or motion_qc["status"] == "FAIL"
     ) else "PASS"
 
-    out_path = project.root / "render_qc.json"
+    project.qc_dir.mkdir(parents=True, exist_ok=True)
+    out_path = project.qc_dir / "shot_qc.json"
     out_path.write_text(json.dumps(qc, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(qc, ensure_ascii=False, indent=2))
 

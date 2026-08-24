@@ -1,5 +1,6 @@
 {
   "project_id": "pipeline_full_selftest",
+  "engine": "faster-whisper",
   "audio_duration": 16.287,
   "shots": [
     {

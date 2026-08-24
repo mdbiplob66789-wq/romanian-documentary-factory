@@ -8,18 +8,18 @@
     "block_02.mp3"
   ],
   "crossfade_sec": 2.0,
-  "peak": -0.76,
-  "true_peak": -0.76,
-  "integrated_lufs": -14.04,
+  "peak": -0.49,
+  "true_peak": -0.49,
+  "integrated_lufs": -13.94,
   "lra": 0.9,
-  "duration": 16.362667,
+  "duration": 16.166667,
   "audio_stream_present": true,
   "video_stream_present": true,
   "body_levels": [
     {
       "block": "block_01.mp3",
       "window_start": 1.12,
-      "mean_db": -16.5
+      "mean_db": -16.6
     },
     {
       "block": "block_02.mp3",

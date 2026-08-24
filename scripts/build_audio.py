@@ -34,9 +34,6 @@ from asset_pipeline.project import (
     DUCKING_ENABLED, INTRO_FADE_SEC, MUSIC_BELOW_VOICE_DB, OUTRO_FADE_SEC,
     ProjectError, VOICE_TARGET_LUFS, load_project,
 )
-from asset_pipeline.repo import REPO_ROOT
-
-OUT_DIR = REPO_ROOT / "out"
 MIN_BLOCK_DURATION_SEC = 240  # п.15: min_duration_sec для трека, до зацикливания
 
 
@@ -166,12 +163,12 @@ def main():
         fail(str(e))
         return
 
-    visual_master = OUT_DIR / project.visual_master_name
+    visual_master = project.visual_master_path
     if not visual_master.exists():
-        fail(f"Нет visual master: {visual_master}. Сначала Remotion render.")
+        fail(f"Нет visual master: {visual_master}. Сначала render_video.py --project {project.id}")
 
     if not project.aligned_timeline_path.exists():
-        fail(f"Нет aligned_timeline.json — сначала align_project.py --project {project.id}")
+        fail(f"Нет aligned_timeline.json — сначала align_shots.py --project {project.id}")
     timeline = json.loads(project.aligned_timeline_path.read_text(encoding="utf-8"))
 
     if not project.music_map_path.exists():
@@ -200,8 +197,8 @@ def main():
             str(mixed),
         ])
 
-        OUT_DIR.mkdir(exist_ok=True)
-        final_path = OUT_DIR / project.output_name
+        project.output_dir.mkdir(parents=True, exist_ok=True)
+        final_path = project.final_master_path
         print(f"== Финальная сборка: video (copy) + AAC 256k -> {final_path.name} ==")
         run([
             "ffmpeg", "-y", "-i", str(visual_master), "-i", str(mixed),

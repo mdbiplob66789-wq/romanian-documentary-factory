@@ -1,0 +1,13 @@
+{
+  "project_id": "pipeline_full_selftest",
+  "path": "/Users/ars/romanian-documentary-factory/projects/pipeline_full_selftest/output/pipeline_full_selftest_FINAL_YOUTUBE.mp4",
+  "file_size_bytes": 14695896,
+  "video_stream_present": true,
+  "audio_stream_present": true,
+  "duration": 16.166667,
+  "resolution": "1920x1080",
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "decode_clean": true,
+  "status": "PASS"
+}

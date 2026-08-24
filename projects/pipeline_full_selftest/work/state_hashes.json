@@ -1,0 +1,14 @@
+{
+  "alignment": {
+    "voiceover": "fc1ad976da6de7704c27d0d787838e5b2ca8002a01b081f483d740c39b64dc00",
+    "map": "489d825a438f90d573ea96309bec967ff78cf3edf8c1a3c8e47a5ff52990f2b8",
+    "music_map": "1a1a4525c7e345d263b8b1bc0b4a60036c01d8ce9ad0b49a335fb4e6b6a367a6"
+  },
+  "final": {
+    "voiceover": "fc1ad976da6de7704c27d0d787838e5b2ca8002a01b081f483d740c39b64dc00",
+    "map": "489d825a438f90d573ea96309bec967ff78cf3edf8c1a3c8e47a5ff52990f2b8",
+    "music_map": "1a1a4525c7e345d263b8b1bc0b4a60036c01d8ce9ad0b49a335fb4e6b6a367a6",
+    "shots": "aecd506484803a14d9c76de9895d24237391dc2ee069d123152aead3879a92de",
+    "music": "fed1b788232c3de4bdbdbdcf90f44570004d191e0b9e1102d7ac445f15c0d51b"
+  }
+}

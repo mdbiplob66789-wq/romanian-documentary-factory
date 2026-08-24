@@ -4,3 +4,12 @@ out/
 .venv/
 __pycache__/
 *.pyc
+.env
+
+# Storage strategy (local-first, п.35 ТЗ): код/карты/state/QC — в git.
+# Тяжёлые бинарники (музыка, промежуточный и финальный рендер, verbose-логи) —
+# НЕ в git, живут локально на Mac + финальный мастер уходит на Google Drive.
+projects/*/music/*.mp3
+projects/*/work/*.mp4
+projects/*/output/*.mp4
+projects/*/logs/
